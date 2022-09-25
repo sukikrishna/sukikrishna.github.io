@@ -1,0 +1,127 @@
+.bg-light-blue {
+  /* background: #e5f0f8 !important; */
+  /* background: #fff8dc !important; */
+  background: #dfe8f1 !important;
+}
+
+.bg-beige {
+  /* background: #eeeeee !important; */
+  background: #ebe6d9 !important;
+}
+
+.bg-lightbeige {
+    /* background: #eeeeee !important; */
+    background: #fdfdfd !important;
+}
+
+.bg-pink {
+  /* background: rosybrown !important; */
+  background: #008080 !important;
+}
+
+.text-rosybrown {
+  color: rgb(26, 24, 24);
+  font-weight: 00;
+}
+
+/* color for the SKILLS icons */
+.rb {
+  /* color: rosybrown; */
+  /* color: #336597; */
+    color: #336597;
+}
+
+/* giving the proportions for the ABOUT ME section: image to text */
+.center-img {
+  left: 50%;
+  top: 50%;
+  width: 350px;
+  height: auto;
+}
+
+/* giving the proportions for the images to be centered under text in the Resume/Work Experiences section */
+.center-img-2 {
+  /* align-items: center;
+  text-align: center; */
+  /* left: 50%; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.frc {
+  width: 45%;
+}
+
+.es {
+  width: 45%;
+}
+
+.polb {
+  width: 30%;
+}
+
+.weird-left {
+  text-indent: 17%;
+}
+
+.weird-left-t {
+  text-indent: 15%;
+}
+
+.weird-left-body {
+  text-indent: 21%;
+}
+
+.b {
+  font-weight: bold;
+}
+
+/* FOR ROUNDED TEXT BOX IN CSS */
+#rcorners {
+  border-radius: 25px;
+}
+
+/* ----------> */
+.class {
+  border-radius: 4px;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+/* To get the circle picture */
+.team-member {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.team-member img {
+  width: 225px;
+  height: 225px;
+  border: 7px solid #fff;
+}
+
+.team-member h4 {
+  margin-top: 25px;
+  margin-bottom: 0;
+  text-transform: none;
+}
+
+.team-member p {
+  margin-top: 0;
+}
+
+/* For the Skills icons */
+
+.service-icon {
+  background-color: rgb(170, 155, 155);
+  color: #2988bc;
+  height: 5rem;
+  width: 5rem;
+  display: block;
+  line-height: 7.5rem;
+  font-size: 2.25rem;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
