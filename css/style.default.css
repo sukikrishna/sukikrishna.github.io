@@ -138,6 +138,36 @@ section {
     background: #ebe6d9 !important;
 }
 
+
+
+.bg-AlightGray {
+    background: #cccccc !important;
+}
+
+.bg-Aorange {
+    /* background: #fff8df !important; */
+    background: #e47911 !important;
+}
+
+.bg-AlightBlue {
+    background: #48a3c6 !important;
+}
+
+.bg-AdarkBlue {
+    /* background: #fff8df !important; */
+    background: #007eb9 !important;
+}
+
+.bg-Ablack {
+    background: #111111 !important;
+}
+
+.bg-AnavyBlue {
+    /* background: #fff8df !important; */
+    background: #37475a !important;
+}
+
+
 /* CHANGE THE FONT SIZE AND COLOR OF THE ICON!!! */
 .icon {
     font-size: 1.4rem;
