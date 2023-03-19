@@ -10,8 +10,8 @@
 }
 
 .bg-lightbeige {
-    /* background: #eeeeee !important; */
-    background: #fdfdfd !important;
+  /* background: #eeeeee !important; */
+  background: #fdfdfd !important;
 }
 
 .bg-pink {
@@ -20,6 +20,13 @@
 }
 
 
+.quote {
+  padding-top: 30px;
+  color: #854a47;
+  font-size: 25px;
+  line-height: 35px;
+  text-align: center;
+}
 
 
 .bg-Aorange {
@@ -56,7 +63,7 @@
 .rb {
   /* color: rosybrown; */
   /* color: #336597; */
-    color: #336597;
+  color: #336597;
 }
 
 /* giving the proportions for the ABOUT ME section: image to text */

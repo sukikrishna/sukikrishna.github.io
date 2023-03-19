@@ -19,10 +19,19 @@ body {
     overflow-x: hidden;
 }
 
+
 section {
     position: relative;
     padding: 5rem 0;
     overflow-x: hidden;
+}
+
+.quote {
+    padding-top: 30px;
+    color: #e47911;
+    font-size: 25px;
+    line-height: 35px;
+    text-align: center;
 }
 
 .scroll-btn {
@@ -177,7 +186,7 @@ section {
 .icontwo {
     font-size: 2.25rem;
     /* color: #000; */
-    position:relative;
+    position: relative;
     bottom: -30px;
     left: auto;
 }
@@ -235,7 +244,8 @@ section {
     width: 6.25rem;
     height: 2px;
     margin: 1.25rem auto;
-    background: #8e3451;;
+    background: #8e3451;
+    ;
 }
 
 .lined-compact::after {
@@ -491,11 +501,13 @@ STYLE SWITCHER FOR DEMO
 
 .btn-link {
     font-weight: 400;
-    color: #8e3451;;
+    color: #8e3451;
+    ;
 }
 
 .btn-link:hover {
-    color: #8e3451;;
+    color: #8e3451;
+    ;
     text-decoration: underline;
 }
 
@@ -511,14 +523,18 @@ STYLE SWITCHER FOR DEMO
 
 .btn-primary {
     color: #fff;
-    background-color: #8e3451;;
-    border-color: #8e3451;;
+    background-color: #8e3451;
+    ;
+    border-color: #8e3451;
+    ;
 }
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #8e3451;;
-    border-color: #8e3451;;
+    background-color: #8e3451;
+    ;
+    border-color: #8e3451;
+    ;
 }
 
 .btn-primary:focus,
@@ -529,8 +545,10 @@ STYLE SWITCHER FOR DEMO
 .btn-primary.disabled,
 .btn-primary:disabled {
     color: #fff;
-    background-color: #8e3451;;
-    border-color: #8e3451;;
+    background-color: #8e3451;
+    ;
+    border-color: #8e3451;
+    ;
     ;
 }
 
@@ -538,8 +556,10 @@ STYLE SWITCHER FOR DEMO
 .btn-primary:not(:disabled):not(.disabled).active,
 .show>.btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #8e3451;;
-    border-color: #8e3451;;
+    background-color: #8e3451;
+    ;
+    border-color: #8e3451;
+    ;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active:focus,
@@ -815,17 +835,21 @@ STYLE SWITCHER FOR DEMO
 }
 
 .btn-outline-primary {
-    color: #8e3451;;
+    color: #8e3451;
+    ;
     ;
     background-color: transparent;
     background-image: none;
-    border-color: #8e3451;;
+    border-color: #8e3451;
+    ;
 }
 
 .btn-outline-primary:hover {
     color: #fff;
-    background-color: #8e3451;;
-    border-color: #8e3451;;
+    background-color: #8e3451;
+    ;
+    border-color: #8e3451;
+    ;
 }
 
 s .btn-outline-primary:focus,
@@ -835,7 +859,8 @@ s .btn-outline-primary:focus,
 
 .btn-outline-primary.disabled,
 .btn-outline-primary:disabled {
-    color: #8e3451;;
+    color: #8e3451;
+    ;
     background-color: transparent;
 }
 
@@ -843,8 +868,10 @@ s .btn-outline-primary:focus,
 .btn-outline-primary:not(:disabled):not(.disabled).active,
 .show>.btn-outline-primary.dropdown-toggle {
     color: #fff;
-    background-color: #8e3451;;
-    border-color: #8e3451;;
+    background-color: #8e3451;
+    ;
+    border-color: #8e3451;
+    ;
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled):active:focus,
@@ -1146,13 +1173,15 @@ body {
 }
 
 a {
-    color: #8e3451;;
+    color: #8e3451;
+    ;
     text-decoration: none;
 }
 
 a:hover,
 a:focus {
-    color: #8e3451;;
+    color: #8e3451;
+    ;
     text-decoration: underline;
 }
 
@@ -1553,7 +1582,8 @@ a.text-dark:focus {
 
 .badge-primary {
     color: #fff;
-    background-color: #8e3451;;
+    background-color: #8e3451;
+    ;
 }
 
 .badge-primary[href]:hover,
@@ -2231,7 +2261,8 @@ code {
 .dropdown-item.active,
 .dropdown-item:active {
     color: #fff;
-    background-color: #8e3451;;
+    background-color: #8e3451;
+    ;
 }
 
 .dropdown-item.disabled,
