@@ -1,2 +1,4 @@
 # sukikrishna.github.io
-This is my personal portfolio!
+
+Personal academic website of Sukanya Krishna (PhD student, Computer Science, Harvard).
+Static site: edit `index.html` and `css/site.css`; GitHub Pages serves it directly.

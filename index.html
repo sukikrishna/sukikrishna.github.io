@@ -1,940 +1,826 @@
-<!-- TYPICAL HTML STRUCTURE
-    <!DOCTYPE html> == HTML version
-    <html> == root element
-        <head> == information about the page (meta, links, title)
-        <forslash head>
-        <body> == what will be displayed on the page
-            ... page content
-        <forslash body>
-    <forslash html>
-
-    Nice intro Tutorial on HTML + CSS: https://www.youtube.com/watch?v=mU6anWqZJcc
- -->
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <!-- meta tag - metadata in HTML document 
-    specify character set, page description, keywords, author of document, viewport settings-->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="all,follow">
+    <title>Sukanya Krishna</title>
+    <meta name="description"
+        content="Sukanya Krishna is a PhD student in Computer Science at Harvard University working on human-AI decision-making, AI safety, and AI for public health.">
+    <link rel="icon" href="images/favicon.ico">
 
-    <!-- title tag - defines the title of the document (used for browser toolbar) -->
-    <title> Sukanya Krishna Portfolio</title>
-
-    <!-- BELOW WILL ADD THE FILE PATH FOR RELATED WEBSITE FILES i.e. CSS, JS -->
-    <!-- Website Icon / Main Button -->
-    <!-- HOW TO CREATE FAVICON! 
-        https://www.lcn.com/blog/beginners-guide-favicons/-->
-    <!-- Downloaded GIMP on Windows ver 2.10.32 -->
-    <!-- The Favicon for brand will be 16 x 16 pixels : https://www.gimp.org/tutorials/Creating_Icons/-->
-    <!-- USED THIS WEBSITE: https://favicon.io/favicon-generator/ -->
-
-    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
-
-    <!-- Bootstrap CSS-->
-    <!-- "most popular CSS Framework for developing responsive and mobile-first websites" -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- CUSTOM Google fonts-->
-    <!-- fonts will be defined in style.default.css -->
-    <!-- https://codepen.io/is_this_taken/pen/ryxOwa -->
-
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="/font-mfizz-2.2/font-mfizz.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
-        rel="stylesheet" type="text/css">
-    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
-        type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-
-    <!-- Lightbox-->
-    <!-- Lightbox is meant to create a modal image gallery with CSS and Javascript -->
-    <link rel="stylesheet" href="vendor/lightbox2/css/lightbox.min.css">
-
-    <!-- theme stylesheet-->
-    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
-    <!-- Custom stylesheet - for your changes-->
-    <link rel="stylesheet" href="css/custom.css">
-    <!-- Leaflet CSS - For the map-->
-    <!-- cdnjs.cloudflare.com is an ultra-fast, reliable, globally available content delivery network for open-source libraries.
-        
-        Cloudflare works with the maintainers of the cdnjs project and distributes the latest versions as they are released. -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css">
-
-    <!-- Favicon-->
-
-    <link rel="shortcut icon" href="favicon-16x16.png">
-
-
-    <!-- Tweaks for older IEs-->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css">
+    <link rel="stylesheet" href="css/site.css">
 </head>
 
-<!-- BOTH PAGE-TOP and INTRO IDS ARE POINTING TO THE SAME LOCATION -->
+<body>
 
-<body id="page-top">
-    <!-- WHEN ENTERING PORTFOLIO THERE WILL BE A NAVIGATION BEFORE ENTERING ABOUT SECTION -->
-    <header class="header sticky-top">
-        <nav class="navbar navbar-expand-lg bg-white border-bottom py-0 bg-pink">
-            <div class="container"><a class="navbar-brand py-1 bg-pink"></a>
-                <!-- can have href="#intro" -->
-                <a class="navbar-brand js-scroll-trigger text-white nav-name-font" href="#page-top"><b>Sukanya
-                        Krishna</b></a>
-                <!-- Allows when clicking name to  -->
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                    data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    Menu
-                    <i class="fa fa-bars"></i>
-                </button>
+    <nav class="nav">
+        <div class="wrap">
+            <a class="brand" href="#top">Sukanya Krishna</a>
+            <ul>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#awards">Awards</a></li>
+            </ul>
+        </div>
+    </nav>
 
-                <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-                    class="navbar-toggler navbar-toggler-right bg-pink"><span class="fas fa-bars"></span></button>
-                <div id="navbarSupportedContent" class="collapse navbar-collapse">
-                    <ul class="navbar-nav ml-auto px-3 bg-pink">
-                        <!-- <li class="nav-item active"><a href="#intro" class="nav-link text-uppercase link-scroll">Home</a></li> -->
-                        <li class="nav-item"><a href="#about" class="nav-link text-uppercase link-scroll">About</a></li>
-                        <li class="nav-item"><a href="#services" class="nav-link text-uppercase link-scroll">Skills</a>
-                        </li>
-                        <li class="nav-item"><a href="#portfolio" class="nav-link text-uppercase link-scroll">Work Experience</a>
-                        </li>
+    <main class="wrap" id="top">
 
+        <!-- ================= ABOUT ================= -->
+        <header class="hero">
+            <aside class="sidebar">
+                <img src="images/my-pic.jpeg" alt="Sukanya Krishna at the beach at sunset">
+                <div class="links">
+                    <a href="mailto:sukanyakrishna@g.harvard.edu"><i class="fa-solid fa-envelope"></i> <span class="full">sukanyakrishna@g.harvard.edu</span><span class="short">Email</span></a>
+                    <a href="https://scholar.google.com/citations?user=N6K7gq8AAAAJ&hl=en" target="_blank"><i
+                            class="ai ai-google-scholar"></i> Google Scholar</a>
+                    <a href="https://github.com/sukikrishna" target="_blank"><i class="fa-brands fa-github"></i>
+                        GitHub</a>
+                    <a href="https://www.linkedin.com/in/sukanya-krishna/" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                    <a href="SukanyaKrishnaCV.pdf" target="_blank"><i class="fa-solid fa-file-lines"></i> CV
+                        (PDF)</a>
+                    <span><i class="fa-solid fa-location-dot"></i> Cambridge, MA</span>
+                </div>
+            </aside>
+            <div>
+                <h1>Sukanya (Suki) Krishna</h1>
+                <p class="role">
+                    PhD Student in Computer Science<br>
+                    Secondary Field in Mind, Brain, and Behavior<br>
+                    <a href="https://seas.harvard.edu/computer-science" target="_blank">Harvard University</a>
+                </p>
+                <p>
+                    I'm a PhD student at Harvard, co-advised by
+                    <a href="https://dtak.github.io/" target="_blank">Finale Doshi-Velez</a> and
+                    <a href="https://maimunamajumder.com/" target="_blank">Maimuna Majumder</a>.
+                    I also work with <a href="https://www.reirab.com/" target="_blank">Reihaneh Rabbany</a> and
+                    <a href="https://mila.quebec/en/directory/jean-francois-godbout" target="_blank">Jean-François
+                        Godbout</a> in the <a href="https://www.complexdatalab.com/" target="_blank">Complex Data
+                        Lab</a> at <a href="https://mila.quebec/en" target="_blank">Mila</a>.
+                </p>
+                <p>
+                    I study how AI systems can support human judgment and decision-making in high-stakes settings,
+                    and what happens when they fail: when models hallucinate, are manipulated, or communicate
+                    confidence they shouldn't have, and how people respond.
+                    My work spans <b>human-AI complementarity and oversight</b>, <b>epistemic integrity and
+                    fact-checking</b> with LLMs, <b>vulnerabilities and emergent behavior in multi-agent AI systems</b>,
+                    <b>interpretability</b>, and <b>AI for public health and medicine</b>.
+                </p>
+                <p>
+                    Before Harvard, I earned a B.S. in <a href="https://be.ucsd.edu/" target="_blank">Bioengineering</a> from UC San Diego (valedictorian, summa cum laude)
+                    with minors in Data Science and Cognitive Science, where I did research in soft robotics and in
+                    machine learning for particle physics.
+                </p>
 
-                        <li class="nav-item"><a href="#textSOF"
-                                class="nav-link text-uppercase link-scroll">Projects</a>
-                        </li>
+            </div>
+        </header>
 
-                        <!-- <li class="nav-item"><a href="#textMAE"
-                                class="nav-link text-uppercase link-scroll">Design-Projects</a>
-                        </li> -->
+        <!-- ================= NEWS ================= -->
+        <section id="news">
+            <h2>News</h2>
+            <ul class="news">
+                <li><span class="date">Oct 2026</span><span>New preprint: <a
+                            href="https://arxiv.org/abs/2610.24969" target="_blank">Towards Human-AI Complementarity
+                            for AI Safety</a>.</span></li>
+                <li><span class="date">Sep 2026</span><span><a href="https://openreview.net/forum?id=NGA7tFeZtr"
+                            target="_blank">Ambiguity-Aware Evaluation for Automated Fact-Checking</a> accepted at the
+                        <b>WiML Workshop @ NeurIPS 2026</b>.</span></li>
+                <li><span class="date">Sep 2026</span><span>Named a <a
+                            href="https://blog.cosmos-institute.org/p/announcing-80-new-cosmos-grantees"
+                            target="_blank">Cosmos Institute grantee</a> in the AI x Truth-Seeking track for
+                        <i>CollectiveScope</i>, a toolkit for detecting and testing emergent coordination among AI
+                        agents.</span></li>
+                <li><span class="date">Sep 2026</span><span>Named a <b>Harvard Bok Graduate Fellow</b> for
+                        2026&ndash;27.</span></li>
+                <li><span class="date">Aug 2026</span><span>Presented time-series clustering of the US overdose
+                        epidemic at the <a href="https://openreview.net/forum?id=GV3YH7EeWk" target="_blank">epiDAMIK
+                            workshop @ KDD '26</a>.</span></li>
+                <li><span class="date">May 2026</span><span>Presented <a
+                            href="https://www.ifaamas.org/Proceedings/aamas2026/pdfs/CSLO7280.pdf"
+                            target="_blank">Beyond Vibe Decision Theory</a> at <b>AAMAS '26</b> in Paphos,
+                        Cyprus.</span></li>
+                <li><span class="date">May 2026</span><span>Began collaborating with <a
+                            href="https://research.ibm.com/" target="_blank">IBM Research</a> on INFERBench; awarded
+                        a <a href="https://www.gemfellowship.org/" target="_blank"><b>GEM Fellowship</b></a> sponsored by IBM Research.</span></li>
+                <li><span class="date">Upcoming</span><span>Co-organizing the First Workshop on Agent Evaluation
+                        Science (AgentEvalSci) at <b>NAACL 2027</b>.</span></li>
+            </ul>
+        </section>
 
-                        <li class="nav-item"><a href="#papers" class="nav-link text-uppercase link-scroll">Papers</a>
-                        </li>
+        <!-- ================= RESEARCH / PROJECTS ================= -->
+        <section id="research">
+            <h2>Current Research</h2>
+            <p class="lede">What I'm working on and thinking about right now.</p>
 
+            <div class="filters" role="group" aria-label="Filter projects by theme">
+                <button type="button" data-filter="all" aria-pressed="true">All</button>
+                <button type="button" data-filter="safety" aria-pressed="false">AI Safety &amp; Evaluation</button>
+                <button type="button" data-filter="hai" aria-pressed="false">Human-AI Interaction</button>
+                <button type="button" data-filter="health" aria-pressed="false">AI for Health &amp; Science</button>
+                <button type="button" data-filter="policy" aria-pressed="false">AI Policy</button>
+            </div>
 
-                        <!-- <li class="nav-item"><a href="#team" class="nav-link text-uppercase link-scroll">Team</a></li> -->
-                        <li class="nav-item"><a href="#contact" class="nav-link text-uppercase link-scroll">Contact</a>
+            <div class="projects">
+
+                <article class="card" data-themes="safety hai">
+                    <h4>Epistemic Integrity &amp; AI Fact-Checking</h4>
+                    <div class="meta">
+                        <span>Harvard SEAS and <a href="https://www.complexdatalab.com/" target="_blank">Complex Data
+                                Lab</a>, <a href="https://mila.quebec/en" target="_blank">Mila</a></span>
+                        <span>Advisors: <a href="https://www.reirab.com/" target="_blank">Reihaneh Rabbany</a>, <a
+                                href="https://mila.quebec/en/directory/jean-francois-godbout"
+                                target="_blank">Jean-François Godbout</a>, <a href="https://dtak.github.io/"
+                                target="_blank">Finale Doshi-Velez</a></span>
+                    </div>
+                    <p>How do people respond to the confidence LLMs express? We find people recognize when a
+                        model's assertive language exceeds its actual confidence, yet still reward it, a tension we
+                        call <i>confidence misalignment</i>. I also contribute to <a
+                            href="https://www.veri-fact.ai/" target="_blank">Veracity</a>, an open-source
+                        fact-checking assistant, and its browser extension, and study why fact-checking evaluation
+                        must separate ambiguous claims from genuine system failures.</p>
+                    <div class="foot">
+                        <span class="tag">LLM evaluation</span><span class="tag">user studies</span>
+                        <a class="btn" href="https://www.veri-fact.ai/" target="_blank">Demo</a>
+                        <a class="btn" href="https://arxiv.org/abs/2506.15794" target="_blank">Paper</a>
+                    </div>
+                </article>
+
+                <article class="card" data-themes="safety">
+                    <h4>INFERBench: Cross-System Vulnerability Reasoning</h4>
+                    <div class="meta">
+                        <span><a href="https://research.ibm.com/" target="_blank">IBM Research</a>, IT Automation
+                            team</span>
+                        <span>Mentors: Raju Pavuluri, Yu Deng, Rahul Krishna, Saurabh Jha</span>
+                    </div>
+                    <p>A benchmark testing whether AI agents can identify vulnerability chains that span realistic
+                        enterprise systems (application code, secrets, infrastructure-as-code, cloud/IAM, network
+                        policy, and agentic API trust) rather than a single vulnerable program.</p>
+                    <div class="foot"><span class="tag">AI agents</span><span class="tag">benchmark design</span><span
+                            class="tag">security</span></div>
+                </article>
+
+                <article class="card" data-themes="safety">
+                    <h4>CollectiveScope: Detecting Emergent Behavior in Multi-Agent AI</h4>
+                    <div class="meta">
+                        <span>Funded by a <a href="https://blog.cosmos-institute.org/p/announcing-80-new-cosmos-grantees"
+                                target="_blank">Cosmos Institute AI x Truth-Seeking grant</a> (2026)</span>
+                    </div>
+                    <p>As AI systems increasingly act as groups of interacting agents, risky coordination can emerge
+                        that no single agent was designed for. CollectiveScope detects the onset of emergent
+                        collective behavior, identifies which agents drive it, and causally validates that
+                        attribution through targeted interventions.</p>
+                    <div class="foot"><span class="tag">multi-agent systems</span><span class="tag">causal
+                            attribution</span>
+                        <a class="btn" href="https://github.com/sukikrishna/emergent_collective_behavior"
+                            target="_blank">Code</a></div>
+                </article>
+
+                <article class="card" data-themes="safety health">
+                    <h4>Mechanistic Interpretability of ECG Foundation Models</h4>
+                    <div class="meta">
+                        <span>Harvard SEAS</span>
+                    </div>
+                    <p>Do independently trained ECG foundation models learn shared, reproducible representations of
+                        the same clinical concepts, or do apparent "clinical features" depend on architecture, seed,
+                        dataset, and method? Using sparse autoencoders and causal tests, I also ask whether a
+                        clinical concept is partly a demographic one.</p>
+                    <div class="foot"><span class="tag">interpretability</span><span class="tag">sparse
+                            autoencoders</span>
+                        <a class="btn" href="https://github.com/sukikrishna/ecg_mechinterp"
+                            target="_blank">Code</a></div>
+                </article>
+
+                <article class="card" data-themes="hai">
+                    <h4>AI Negotiation Sparring Partner</h4>
+                    <div class="meta">
+                        <span>Harvard SEAS</span>
+                        <span>Advisor: <a href="https://dtak.github.io/" target="_blank">Finale Doshi-Velez</a></span>
+                    </div>
+                    <p>A conversational partner that reads a proposed negotiation strategy and its supporting
+                        documents, surfaces loopholes, inconsistencies, and vulnerabilities, and suggests stronger
+                        alternatives, built to support human judgment rather than replace it.</p>
+                    <div class="foot"><span class="tag">conversational AI</span><span class="tag">document
+                            reasoning</span></div>
+                </article>
+
+                <article class="card" data-themes="hai">
+                    <h4>AI-Assisted Grading in CS Courses</h4>
+                    <div class="meta">
+                        <span><a href="https://bokcenter.harvard.edu/" target="_blank">Derek Bok Center for Teaching
+                                and Learning</a>, Harvard</span>
+                    </div>
+                    <p>A study of whether AI assistance helps CS course graders work more accurately and
+                        consistently, and how students perceive and respond to AI-generated feedback on their
+                        work.</p>
+                    <div class="foot"><span class="tag">education</span><span class="tag">user studies</span></div>
+                </article>
+
+                <article class="card" data-themes="health hai">
+                    <h4>LLMs for Clinical Records &amp; Medical Education</h4>
+                    <div class="meta">
+                        <span><a href="https://www.brighamandwomens.org/" target="_blank">Brigham and Women's
+                                Hospital</a> and <a href="https://www.amsterdamumc.org/en.htm" target="_blank">Amsterdam
+                                UMC</a></span>
+                        <span>Advisor: Sanjat Kanjilal</span>
+                    </div>
+                    <p>A bilingual, two-center study evaluating local LLMs for extracting infectious disease
+                        syndromes from multilingual EHRs, plus an LLM tutor that generates cases and teaches through
+                        Socratic dialogue, piloting in Harvard's HST40 in Fall 2026.</p>
+                    <div class="foot"><span class="tag">clinical NLP</span><span class="tag">local LLMs</span></div>
+                </article>
+
+                <article class="card" data-themes="health">
+                    <h4>PolyFlow: Multi-Target Ligand Design</h4>
+                    <div class="meta">
+                        <span><a href="https://sjr-redesign.stjude.org/labs/gorgulla-lab.html"
+                                target="_blank">Gorgulla Lab</a>, St. Jude Children's Research Hospital</span>
+                        <span>Advisor: Christoph Gorgulla</span>
+                    </div>
+                    <p>A searchable, reaction-aware library and screening method for connecting terminal fragments
+                        into synthesizable molecules that bind multiple targets.</p>
+                    <div class="foot"><span class="tag">drug discovery</span><span class="tag">virtual
+                            screening</span></div>
+                </article>
+
+                <article class="card" data-themes="health policy">
+                    <h4>Epistemic Trespassing in COVID-19 Science</h4>
+                    <div class="meta">
+                        <span>Harvard SEAS and <a href="https://www.chip.org/" target="_blank">Computational Health
+                                Informatics Program</a>, Boston Children's Hospital</span>
+                        <span>Advisor: <a href="https://maimunamajumder.com/" target="_blank">Maimuna
+                                Majumder</a></span>
+                    </div>
+                    <p>How did the rush of researchers from other fields reshape pandemic science? Across 450,000+
+                        COVID-19 papers in OpenAlex, outbreak scientists never exceeded 12.5% of authors and 62.7% of
+                        papers had none on the team. Yet expert-led teams published in higher-impact venues and drew
+                        more citations, a pattern of expert dilution that fortified knowledge silos.</p>
+                    <div class="foot"><span class="tag">science of science</span><span class="tag">network
+                            analysis</span><span class="tag">bibliometrics</span></div>
+                </article>
+
+                <article class="card" data-themes="policy">
+                    <h4>Infrastructure-Aware AI Governance</h4>
+                    <div class="meta">
+                        <span><a href="https://www.hsph.harvard.edu/" target="_blank">Harvard T.H. Chan School of Public Health</a></span>
+                        <span>Advisor: <a href="https://hsph.harvard.edu/profile/francesca-dominici/"
+                                target="_blank">Francesca Dominici</a></span>
+                    </div>
+                    <p>A quantitative framework for diversifiable risk in AI infrastructure investments, scoring
+                        site-level financial opacity, geographic vulnerability, resource stress, and community impact
+                        and aggregating them into portfolio-level exposure.</p>
+                    <div class="foot"><span class="tag">AI governance</span><span class="tag">risk
+                            modeling</span></div>
+                </article>
+
+            </div>
+
+            <div class="callout">
+                <i class="fa-solid fa-handshake"></i>
+                <p><b>Interested in collaborating?</b> I'm always happy to talk about research ideas, especially
+                    around human-AI decision-making, AI safety, and AI for health. Reach out at
+                    <a href="mailto:sukanyakrishna@g.harvard.edu">sukanyakrishna@g.harvard.edu</a>.</p>
+            </div>
+        </section>
+
+        <!-- ================= PUBLICATIONS ================= -->
+        <section id="publications">
+            <h2>Publications</h2>
+            <p class="lede">* denotes equal contribution. Full list on <a
+                    href="https://scholar.google.com/citations?user=N6K7gq8AAAAJ&hl=en" target="_blank">Google
+                    Scholar</a>.</p>
+
+            <h3>Conference Papers</h3>
+            <ul class="pubs">
+                <li class="pub">
+                    <span class="venue">AAMAS 2026</span>
+                    <div>
+                        <span class="title">Beyond Vibe Decision Theory: Asymmetric Manipulation Vulnerabilities in
+                            LLM Multi-Agent Coordination</span>
+                        <span class="authors"><b>Sukanya Krishna</b>, Tobin South</span>
+                        <span class="where">International Conference on Autonomous Agents and Multiagent Systems
+                            (AAMAS), 2026</span>
+                        <div class="btns"><a href="https://www.ifaamas.org/Proceedings/aamas2026/pdfs/CSLO7280.pdf"
+                                target="_blank">PDF</a><a href="https://github.com/sukikrishna/multi_agent_game_theory"
+                                target="_blank">Code</a></div>
+                    </div>
+                </li>
+                <li class="pub">
+                    <span class="venue">IJCAI 2025</span>
+                    <div>
+                        <span class="title">Veracity: An Open-Source AI Fact-Checking System</span>
+                        <span class="authors">Taylor Lynn Curtis, Maximilian Puelma Touzel, &hellip;, <b>Sukanya
+                                Krishna</b>, &hellip;, Kellin Pelrine</span>
+                        <span class="where">IJCAI AI and Social Good Track (Demo), 2025</span>
+                        <div class="btns">
+                            <a href="https://arxiv.org/abs/2506.15794" target="_blank">arXiv</a>
+                            <a href="https://drive.google.com/file/d/1DOauI-shWXmMDkCYClIbgUKpFwISrSd-/view"
+                                target="_blank">Video</a>
+                            <a href="https://www.veri-fact.ai/" target="_blank">Demo</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="pub">
+                    <span class="venue">RoboSoft 2025</span>
+                    <div>
+                        <span class="title">Towards Soft Steerable Vine Robots Using Actuating Polymers</span>
+                        <span class="authors"><b>Sukanya Krishna</b>, Jose Martinez, Sun Kim, &hellip;, Tania
+                            Morimoto</span>
+                        <span class="where">IEEE International Conference on Soft Robotics (RoboSoft), 2025</span>
+                        <div class="btns"><a href="https://ieeexplore.ieee.org/abstract/document/11020849"
+                                target="_blank">IEEE</a></div>
+                    </div>
+                </li>
+            </ul>
+
+            <h3>Preprints &amp; Under Review</h3>
+            <ul class="pubs">
+                <li class="pub">
+                    <span class="venue ws">arXiv 2026</span>
+                    <div>
+                        <span class="title">Towards Human-AI Complementarity for AI Safety</span>
+                        <span class="authors">Shi, Christ, &hellip;, <b>Sukanya Krishna</b>, &hellip;, Rishub
+                            Jain</span>
+                        <div class="btns"><a href="https://arxiv.org/abs/2610.24969" target="_blank">arXiv</a></div>
+                    </div>
+                </li>
+                <li class="pub">
+                    <span class="venue ws">arXiv 2026</span>
+                    <div>
+                        <span class="title">Toward Human-AI Complementarity Across Diverse Tasks</span>
+                        <span class="authors">Xu, Dahmani, &hellip;, <b>Sukanya Krishna</b>, &hellip;, Rishub
+                            Jain</span>
+                        <div class="btns"><a href="https://arxiv.org/abs/2605.04070" target="_blank">arXiv</a></div>
+                    </div>
+                </li>
+                <li class="pub">
+                    <span class="venue ws">arXiv 2025</span>
+                    <div>
+                        <span class="title">Statistical vs. Deep Learning Models for Estimating Substance Overdose
+                            Excess Mortality in the US</span>
+                        <span class="authors"><b>Sukanya Krishna</b>, Marie-Laure Charpignon, Maimuna
+                            Majumder</span>
+                        <div class="btns"><a href="https://arxiv.org/abs/2512.21456" target="_blank">arXiv</a></div>
+                    </div>
+                </li>
+                <li class="pub">
+                    <span class="venue ws">Under review</span>
+                    <div>
+                        <span class="title">Misalignment of Epistemic Confidence in Large Language Models</span>
+                        <span class="authors">Bijean Ghafouri, Taylor Lynn Curtis, <b>Sukanya Krishna</b>,
+                            Maximilian Puelma Touzel, Reihaneh Rabbany, Kellin Pelrine, Jean-François Godbout</span>
+                    </div>
+                </li>
+                <li class="pub">
+                    <span class="venue ws">Under review</span>
+                    <div>
+                        <span class="title">Rethinking Automated Fact-Checking Evaluation: Disentangling Input
+                            Ambiguity from System Failure</span>
+                        <span class="authors"><b>Sukanya Krishna*</b>, Dorsaf Sallami*, &hellip;, Finale
+                            Doshi-Velez</span>
+                    </div>
+                </li>
+                <li class="pub">
+                    <span class="venue ws">Under review</span>
+                    <div>
+                        <span class="title">VeracityExt: In-Browser Fact-Checking</span>
+                        <span class="authors">Dorsaf Sallami, <b>Sukanya Krishna</b>, &hellip;, Reihaneh
+                            Rabbany</span>
+                    </div>
+                </li>
+            </ul>
+
+            <h3>Workshop Papers, Posters &amp; Talks</h3>
+            <ul class="pubs">
+                <li class="pub">
+                    <span class="venue ws">NeurIPS 2026 WS</span>
+                    <div>
+                        <span class="title">Ambiguity-Aware Evaluation for Automated Fact-Checking</span>
+                        <span class="authors"><b>Sukanya Krishna</b>, Dorsaf Sallami, Jean-François Godbout,
+                            Reihaneh Rabbany, Maimuna Majumder, Finale Doshi-Velez</span>
+                        <span class="where">Women in Machine Learning (WiML) Workshop @ NeurIPS 2026</span>
+                        <div class="btns"><a href="https://openreview.net/forum?id=NGA7tFeZtr"
+                                target="_blank">OpenReview</a></div>
+                    </div>
+                </li>
+                <li class="pub">
+                    <span class="venue ws">KDD 2026 WS</span>
+                    <div>
+                        <span class="title">Spatiotemporal Modeling of the Substance Overdose Epidemic in the United
+                            States Using Time-Series Clustering</span>
+                        <span class="authors"><b>Sukanya Krishna</b>, Andrew Perrault, Marie-Laure Charpignon,
+                            Maimuna Majumder</span>
+                        <span class="where"><a href="https://epidamik.github.io/" target="_blank">epiDAMIK Workshop</a> @ KDD 2026</span>
+                        <div class="btns"><a href="https://openreview.net/forum?id=GV3YH7EeWk"
+                                target="_blank">OpenReview</a></div>
+                    </div>
+                </li>
+                <li class="pub">
+                    <span class="venue ws">NSF 2026 WS</span>
+                    <div>
+                        <span class="title">Confidence-Aware Human-AI Complementarity</span>
+                        <span class="authors">Y. Zheng, A. Dahmani, &hellip;, <b>Sukanya Krishna</b>, &hellip;,
+                            Rishub Jain</span>
+                        <span class="where">NSF AI-SDM Human-AI Complementarity Workshop: Dynamic Alignment,
+                            2026</span>
+                    </div>
+                </li>
+                <li class="pub">
+                    <span class="venue ws">NeurIPS 2025 WS</span>
+                    <div>
+                        <span class="title">Asymmetric Manipulation Vulnerabilities in LLM Multi-Agent
+                            Coordination</span>
+                        <span class="authors"><b>Sukanya Krishna</b>, Tobin South</span>
+                        <span class="where">Workshop on Algorithmic Collective Action @ NeurIPS 2025</span>
+                    </div>
+                </li>
+                <li class="pub">
+                    <span class="venue ws">NeurIPS 2024 WS</span>
+                    <div>
+                        <span class="title">Epistemic Integrity in Large Language Models</span>
+                        <span class="authors">Bijean Ghafouri, Shahrad Mohammadzadeh, &hellip;, <b>Sukanya
+                                Krishna</b>, &hellip;, Kellin Pelrine</span>
+                        <span class="where">Safe Generative AI Workshop @ NeurIPS 2024</span>
+                        <div class="btns"><a href="https://arxiv.org/abs/2411.06528" target="_blank">arXiv</a></div>
+                    </div>
+                </li>
+                <li class="pub">
+                    <span class="venue ws">NeurIPS 2021 WS</span>
+                    <div>
+                        <span class="title">Particle Graph Autoencoders and Differentiable, Learned Energy Mover's
+                            Distance</span>
+                        <span class="authors">Steven Tsan, Raghav Kansal, &hellip;, <b>Sukanya Krishna</b>,
+                            &hellip;, Maurizio Pierini</span>
+                        <span class="where">Machine Learning and the Physical Sciences Workshop @ NeurIPS
+                            2021</span>
+                        <div class="btns"><a href="https://arxiv.org/abs/2111.12849" target="_blank">arXiv</a></div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ================= EXPERIENCE ================= -->
+        <section id="experience">
+            <h2>Experience</h2>
+
+            <h3>Education</h3>
+            <ul class="entries">
+                <li class="entry">
+                    <div class="head"><span class="org"><a href="https://seas.harvard.edu/computer-science" target="_blank">Harvard University</a></span><span class="when">Sep 2024
+                            &ndash; Present</span></div>
+                    <div class="role">PhD in Computer Science; Secondary Field in Mind, Brain, and Behavior</div>
+                    <div class="mentor">Advisors: <a href="https://dtak.github.io/" target="_blank">Finale
+                            Doshi-Velez</a> and <a href="https://maimunamajumder.com/" target="_blank">Maimuna
+                            Majumder</a></div>
+                </li>
+                <li class="entry">
+                    <div class="head"><span class="org"><a href="https://be.ucsd.edu/" target="_blank">University of California, San Diego</a></span><span
+                            class="when">Sep 2020 &ndash; Jun 2024</span></div>
+                    <div class="role">B.S. in Bioengineering; Minors in Data Science and Cognitive Science</div>
+                    <ul class="did">
+                        <li>GPA 3.995/4.0, summa cum laude, valedictorian of graduating class</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Industry &amp; Research Collaborations</h3>
+            <ul class="entries">
+                <li class="entry">
+                    <div class="head"><span class="org"><a href="https://research.ibm.com/" target="_blank">IBM
+                                Research</a></span><span class="when">May 2026 &ndash; Present</span></div>
+                    <div class="role">Research Collaborator, IT Automation Team</div>
+                    <div class="mentor">Mentors: Raju Pavuluri, Yu Deng, Rahul Krishna, Saurabh Jha</div>
+                    <ul class="did">
+                        <li>Building INFERBench, a benchmark for whether AI agents can reason about vulnerability
+                            chains spanning realistic multi-service enterprise systems.</li>
+                    </ul>
+                </li>
+                <li class="entry">
+                    <div class="head"><span class="org"><a href="https://withlexi.com/" target="_blank">Lexi AI</a></span><span class="when">Mar 2025 &ndash; Mar
+                            2026</span></div>
+                    <div class="role">Machine Learning Engineer, NLP &amp; Speech (part-time)</div>
+                    <ul class="did">
+                        <li>Fine-tuned and evaluated speech-to-text, translation, and text-to-speech models for
+                            real-time medical interpretation.</li>
+                        <li>Curated multilingual datasets for medical and low-resource languages and built a
+                            benchmarking pipeline for accuracy, latency, and clinical relevance.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Graduate Research Fellowships &amp; Programs</h3>
+            <ul class="entries">
+                <li class="entry">
+                    <div class="head"><span class="org"><a href="https://sparai.org/" target="_blank">Supervised
+                                Program for Alignment Research (SPAR)</a></span><span class="when">Sep 2025 &ndash; Jun
+                            2026</span></div>
+                    <div class="role">Research Fellow, Human-AI Complementarity for Amplified Oversight</div>
+                    <div class="mentor">Mentor: <a href="https://rishubjain.github.io/" target="_blank">Rishub
+                            Jain</a> (<a href="https://www.sampura.org/" target="_blank">Sampura Research</a>; previously <a
+                            href="https://deepmind.google/" target="_blank">Google DeepMind</a>)</div>
+                    <ul class="did">
+                        <li>Built confidence-based hybridization and AI-assistance frameworks and a multi-domain
+                            oversight dataset (QuALITY, BIG-Bench, GPQA-Diamond) to study when human-AI teams beat
+                            either alone.</li>
+                        <li>Resulted in two arXiv preprints and an NSF AI-SDM workshop paper.</li>
+                    </ul>
+                </li>
+                <li class="entry">
+                    <div class="head"><span class="org"><a href="https://www.pivotal-research.org/"
+                                target="_blank">Pivotal Research Fellowship</a>, <a href="https://www.safeai.org.uk/"
+                                target="_blank">London Initiative for Safe AI</a></span><span class="when">Jun 2025
+                            &ndash; Sep 2025</span></div>
+                    <div class="role">Research Fellow, Coordination Vulnerabilities in LLM Multi-Agent Systems</div>
+                    <div class="mentor">Mentor: <a href="https://tobin-fyi.pages.dev" target="_blank">Tobin
+                            South</a> (<a href="https://www.anthropic.com/" target="_blank">Anthropic</a>)</div>
+                    <ul class="did">
+                        <li>Showed that LLM agents in social dilemmas are asymmetrically vulnerable to manipulation
+                            through contextual framing and strategic advice (AAMAS '26 first author).</li>
+                    </ul>
+                </li>
+                <li class="entry">
+                    <div class="head"><span class="org"><a
+                                href="https://home.watson.brown.edu/news/news-from-watson/AI-Summer-School"
+                                target="_blank">AI Policy Summer School</a>, Brown University</span><span
+                            class="when">Jul 2025</span></div>
+                    <div class="role">Selected Participant</div>
+                    <div class="mentor">Instructor: Serena Booth; hosted by the Watson School and <a
+                            href="https://cntr.brown.edu/" target="_blank">CNTR</a></div>
+                    <ul class="did">
+                        <li>One of 20 graduate students nationally trained in AI policy, followed by meetings with
+                            members of Congress and executive agency officials in Washington, D.C.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Graduate Leadership &amp; Community</h3>
+            <ul class="rows">
+                <li><span class="what">Student Leader in AI, <a href="https://cyber.harvard.edu/"
+                            target="_blank">Berkman Klein Center for Internet &amp; Society</a></span></li>
+                <li><span class="what">Policy Fellow, Harvard AI Safety Student Team (AISST)</span></li>
+                <li><span class="what">Student Leader, Harvard Interfaith Dialogue Program</span></li>
+                <li><span class="what">SEAS InTouch Peer Mentor</span>
+                    <span class="detail">Supporting graduate student community and well-being.</span></li>
+            </ul>
+            <h3>Undergraduate Internships</h3>
+            <ul class="entries">
+                <li class="entry">
+                    <div class="head"><span class="org"><a href="https://www.bms.com/" target="_blank">Bristol Myers
+                                Squibb</a></span><span class="when">Jul 2023 &ndash; Sep 2023</span></div>
+                    <div class="role">Machine Learning Intern, Clinical Pharmacology &amp; Pharmacometrics</div>
+                    <ul class="did">
+                        <li>Identified key predictive features for diabetes with scikit-learn classifiers,
+                            explainable AI methods, and neural networks (86% and 75% accuracy on two datasets).</li>
+                        <li>Used GANs to augment patient data.</li>
+                    </ul>
+                </li>
+                <li class="entry">
+                    <div class="head"><span class="org"><a href="https://summerofcode.withgoogle.com/"
+                                target="_blank">Google Summer of Code</a>, <a href="https://oicr.on.ca/"
+                                target="_blank">Ontario Institute for Cancer Research</a></span><span class="when">May
+                            2023 &ndash; Sep 2023</span></div>
+                    <div class="role">Open Source Software Engineer (part-time, remote)</div>
+                    <ul class="did">
+                        <li>Built a CI/CD pipeline with Argo CD, Argo Workflows, AWS, and Jenkins, and Dockerized
+                            key repositories in the data release pipeline.</li>
+                    </ul>
+                </li>
+                <li class="entry">
+                    <div class="head"><span class="org"><a href="https://www.onemedical.com/" target="_blank">Amazon (One Medical)</a></span><span class="when">May 2023
+                            &ndash; Aug 2023</span></div>
+                    <div class="role">Product Analytics Intern</div>
+                    <ul class="did">
+                        <li>Built a pre-aggregated patient data model on Snowflake and published Tableau dashboards
+                            tracking 8 key success metrics.</li>
+                    </ul>
+                </li>
+                <li class="entry">
+                    <div class="head"><span class="org"><a href="https://www.medtronic.com/"
+                                target="_blank">Medtronic</a></span><span class="when">Jun 2022 &ndash; Aug
+                            2022</span></div>
+                    <div class="role">Data Engineering Intern, Diabetes</div>
+                    <ul class="did">
+                        <li>Cut compute time 7.5&times; for a diabetes digital twin (~50k InPen patients) while
+                            keeping fits stable, for an estimated 5&times; cloud cost reduction at scale.</li>
+                    </ul>
+                </li>
+                <li class="entry">
+                    <div class="head"><span class="org"><a href="https://hindsightsolutions.net/"
+                                target="_blank">Hindsight Technology Solutions</a></span><span class="when">Jun 2021
+                            &ndash; Aug 2021</span></div>
+                    <div class="role">Data Science &amp; Machine Learning Intern</div>
+                    <ul class="did">
+                        <li>Built a website scraper and few-shot article classifier with spaCy and BeautifulSoup
+                            (<a href="https://github.com/Hindsight-Intern/Final-Classifier" target="_blank">code</a>).
                         </li>
                     </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+                </li>
+            </ul>
 
-
-
-    <!-- Hero Section-->
-    <!-- the intro/title section for the website -->
-
-    <!-- <div class="content h-100 d-flex align-items-center">
-        <div class="container text-center text-white">
-          <p class="headings-font-family text-uppercase lead"></p> -->
-
-    <header id="intro" class="hero bg-cover bg-lightbeige" style="height: 100px">
-        <div class="overlay"></div>
-        <div class="content h-75 d-flex align-items-center">
-            <div class="container text-center text-white">
-                <p class="headings-font-family text-uppercase lead"></p>
-                <h1 class="text-uppercase hero-text"><span class="font-weight-bold d-block">Sukanya Krishna</span></h1>
-                <!-- <br> </br> -->
-                <!-- <h3 class="headings-font-family text-uppercase  text-gray"> <a href="https://cogsci.ucsd.edu/">Cognitive
-                        Science</a> : Machine Learning (Data Science) & <a href="https://bioengineering.ucsd.edu/"
-                        target="_blank">Bioengineering</a> @ University of California, San Diego (<a
-                        href="https://ucsd.edu/" target="_blank">UCSD</a>) </h3> -->
-                <h3 class="headings-font-family text-uppercase  text-gray"> <a href="https://bioengineering.ucsd.edu/"
-                    target="_blank">Bioengineering</a> and <a href="https://datascience.ucsd.edu/" target="_blank">Data Science</a> @ <a
-                    href="https://ucsd.edu/" target="_blank">University of California, San Diego</a> (UCSD) & <a
-                    href="https://www.harvard.edu/" target="_blank">Harvard University</a> </h3>
-            </div>
-
-            <!-- putting a button that will take the user down to the "About" section -->
-            <!-- </div><a href="#about" class="scroll-btn link-scroll"><i class="fas fa-angle-double-down"></i></a> -->
-        </div>
-
-        <div class="form-group col-lg-12 align-items-center">
-            <a href="#about" class="btn btn-outline-primary w-100 link-scroll">Enter Portfolio :)</a>
-        </div>
-
-        <!-- The icons take up the color of the background color -- to show on blank blackground need to change it -->
-
-        <!-- <a href="#about" class="scroll-btn link-scroll"><i class="fa fa-arrow-down" style="font-size:60px;color:lightblue;"></i></a> -->
-    </header>
-
-
-
-    <!-- SECOND NAVIGATION BAR FOR COOL EFFECT, BUT NOT NEEDED -->
-
-    <!-- MOTIVATION FOR COLOR SCHEME: https://www.pinterest.com/pin/63683782214856789/ -- teals, yellows, and grays! -->
-
-    <!-- About Section-->
-    <!-- WILL BE USING CSS IN ORDER TO ADD IN THE BACKGROUND COLORS AND ELEMENTS -->
-    <section id="about" class="bg-light-blue">
-        <div class="container">
-            <!-- <h2 class="lined text-uppercase text-center"> All About Me! </h2> -->
-            <h2 class="text-center"> All About Me! </h2>
-            <br>
-            <br>
-            <br>
-            <!-- <div class="text-center"> -->
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="center-img"><img class="center-img" src="./images/suki-bitmoji.JPG"
-                            style="border:8px solid white; width:350px!important; height:100%"></a>
-
-                        <div id="socials" class="mt-4">
-                            <ul class="mb-0 list-inline text-center">
-                                <li class="list-inline-item"><a href="https://github.com/sukikrishna" target="_blank"
-                                        class="social-link social-link-google-plus"><i class="fab fa-github"></i></a>
-                                </li>
-
-                                <li class="list-inline-item"><a
-                                        href="https://www.linkedin.com/in/sukanya-krishna/" target="_blank"
-                                        class="social-link social-link-instagram"><i class="fab fa-linkedin"></i></a>
-                                </li>
-
-                                <!-- <li class="list-inline-item"><a href="https://www.linkedin.com/in/sukanya-krishna-a7b754198/" target="_blank" class="social-link social-link-instagram"><i class="fab fa-facebook"></i></a></li> -->
-
-                                <li class="list-inline-item"><a href="mailto:sskrishn@ucsd.edu" target="_blank"
-                                        class="social-link social-link-email"><i class="fas fa-envelope"></i></a></li>
-
-                                <li class="list-inline-item"><a href="SukanyaKrishnaCV.pdf" target="_blank"
-                                        class="social-link social-link-email"><i class="fas fa-file"></i></a></li>
-
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-lg-6">
-                    <p> Hello, my name is Sukanya (or Suki for short)! I’m currently a PhD student at Harvard University in Engineering Sciences 
-                        with a concentration in Computer Science and a secondary in Data Science. 
-                        I graduated from the University of California San Diego where I majored in Bioengineering with a double minor in
-                        Data Science and Cognitive Science. I am interested in applying computational methods and applied machine learning with
-                        respect to the medical sciences. As an avid programmer and engineer, I’m very passionate about using CS and Data Science (DS) 
-                        in order to help solve some of the world's most interesting problems.</p>
-
-                    <p> I’m interested in exploring and learning about all sorts of technology and software. Some of my
-                        passions for learning surround app development, finance, geospatial analysis, computer vision,
-                        renewable energy, and healthcare. I find it incredible how CS and DS can be used in so many
-                        intersecting ways and all the opportunities that exist in these fields. If there are any interesting collaboration opportunities or would like to reach out, 
-                        feel free to reach me through the "Contact Me" message form!
-                    </p>
-
-                    <p>
-                    To learn a bit more about me, separate from school, work, and tech, I really enjoy listening to
-                    music on YouTube or <a href="https://open.spotify.com/user/suki1002?si=0a2f5c487ddd4ec6"
-                        target="_blank">Spotify</a>, making music (I have been playing the flute for ~10 years now since
-                    middle school!), watching kdramas or anime (my favorites at the moment are Blue Lock and One Punch Man), and learning new languages 
-                    (I am currently learning Korean through my university!).
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section-->
-    <!-- Great website for getting icons: https://fontawesome.com/search?q=website&o=r 
-    JS Script BELOW -->
-
-    <!-- Can make the boxes into circles??? 
-    https://stackoverflow.com/questions/17431634/how-to-create-a-circular-textarea -->
-    <section id="services" class="bg-beige">
-        <div class="container">
-            <header class="text-center mb-5">
-                <!-- <h2 class="lined text-uppercase"> Skills </h2> -->
-                <h2 class="text-center"> Skills </h2>
-                <h4> Below are some of the skills that I am familiar with, and I'm always looking to learn more.</h4>
-            </header>
-            <div class="row text-center">
-                <div class="col-lg-4">
-                    <div class="bg-white mb-4 p-4 rounded-pill">
-
-                        <!-- <span class="service-icon rounded-circle mx-auto mb-3 text-secondary">
-                            <i class="fa fa-dot-circle-o fa-2x" style="padding-top:19px;"></i>
-                        </span> -->
-
-                        <div class="icon-updated mb-4 rb">
-                            <i class="fab fa-python icontwo"></i>
-                        </div>
-                        <h3 class="text-uppercase font-weight-bold"> Python </h3>
-                        <p class="text-black"> 5 years + </p>
-                        <p class="text-darkgray"> Proficient with NumPy, Pandas, Keras, TensorFlow, PyTorch, Flask,
-                            Django </p>
-                        <br>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="bg-white mb-4 p-4 rounded-pill">
-                        <div class="icon-updated mb-4 rb"><i class="fas fa-database icontwo"></i></div>
-                        <h3 class="text-uppercase font-weight-bold"> SQL & R </h3>
-                        <p class="text-black"> 1 year </p>
-                                <p class="text-darkgray"> Proficient with working with relational databases, querying,
-                                    and performing data analysis. </p>
-                                <br>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="bg-white mb-4 p-4 rounded-pill">
-                        <div class="icon-updated mb-4 rb"><i class="fab fa-java icontwo"></i></div>
-                        <h3 class="text-uppercase font-weight-bold"> Java </h3>
-                        <p class="text-black"> 3 years + </p>
-                        <p class="text-darkgray"> Proficient with object-oriented programming (OOP) principles. </p>
-                        <br>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="bg-white mb-4 p-4 rounded-pill">
-                        <div class="icon-updated mb-4 rb"><i class="fab fa-git icontwo"></i></div>
-                        <h3 class="text-uppercase font-weight-bold"> Git & GitHub </h3>
-                        <p class="text-black"> 4 years + </p>
-                        <p class="text-darkgray"> Proficient with using Git and GitHub as a version control system for
-                            managing projects. </p>
-                        <br>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="bg-white mb-4 p-4 rounded-pill">
-                        <div class="icon-updated mb-4 rb"><i class="fab fa-aws icontwo" aria-hidden="true"></i></i>
-                        </div>
-                        <h4 class="text-uppercase font-weight-bold"> Cloud & Containerization</h4>
-                        <p class="text-black"> 1 year </p>
-                                <p class="text-darkgray"> Proficient with using Cloud Computing and Containerization
-                                    Technology: AWS, Kubernetes, Poseidon. </p>
-                                <br>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="bg-white mb-4 p-4 rounded-pill">
-                        <div class="icon-updated mb-4 rb"><i class="fab fa-css3-alt icontwo"></i></div>
-                        <h3 class="text-uppercase font-weight-bold"> HTML & CSS</h3>
-                        <p class="text-black"> 1 year </p>
-                        <p class="text-darkgray"> Adequate at using HTML and CSS for web-development. </p>
-                        <br>
-                    </div>
-                </div>
-
-                <!-- NODE JS -->
-                <!-- <div class="col-lg-4">
-                        <div class="bg-white mb-4 p-4">
-                            <div class="icon mb-3 rb"><i class="fab fa-node-js"></i></div>
-                            <h4 class="text-uppercase font-weight-bold"> Node.js </h4>
-                            <p class="small text-black"> < 1 year </p>
-                            <p> </p>
-                            <p class="small text-darkgray"> Adequate with using JavaScript for full-stack development. </p>
-                        </div>
-                    </div> -->
-    </section>
-
-    <!-- Portfolio Section-->
-    <!-- Resume Experience Section-->
-    <section id="portfolio" class="bg-light-blue">
-        <div class="container">
-            <header class="text-center mb-5">
-                <!-- <h2 class="lined text-uppercase"> Resume / Work Experiences </h2> -->
-                <h2 class="text-center"> Select Work Experiences </h2>
-            </header>
-            <!-- <div class="row align-items-center"> -->
-
-                <div class="col-lg-15">
-                    <div class="bg-white mb-4 p-4 align-items-center rounded-mlg">
-                        <h4 class="text-uppercase font-weight-bold text-center"> Undergraduate Student Researcher @ <a
-                                href="https://genome.ucsd.edu/?_gl=1%2A1u0yj6d%2A_gcl_au%2AMTk3NTEyNDc5MS4xNzIzMTcyNzg0%2A_ga%2AMzM4MjQxMzY1LjE3MTcwNDUzMTE.%2A_ga_PWJGRGMV0T%2AMTcyMzE3Mjc4My4xLjAuMTcyMzE3Mjc4My4wLjAuMA.." target="_blank"> Systems Biology and Systems Medicine Lab </a> </h4>
-                        <h5 class="text-center"> UCSD
-                            &nbsp;&nbsp;&nbsp; La Jolla, CA &nbsp;&nbsp;&nbsp; April 2024 - Sep. 2024 </h5>
-                        <p class="small text-darkgray">
-                        <ul>
-                            <li> Developing an image-based methodology to stratify the heterogeneity and classify the disease state of tumors in
-                                triple-negative breast cancer (TNBC) using fluorescent microscopy images obtained from GeoMx experiments.</li>
-                            <!-- <li> Designed and published Tableau dashboards, visually representing 8 crucial success metrics sourced from Snowflake and -->
-                                <!-- Mixpanel. Utilized a pre-aggregated data model to ensure superior performance.</li> -->
-                        </ul>
-    
-                        <img class="center-img-2 es" src="./images/subramaniam.png" alt="Subramaniam Lab Picture"
-                            width="500">
-                        <p>
-                    </div>
-                </div>
-
-                <div class="col-lg-15">
-                    <div class="bg-white mb-4 p-4 align-items-center rounded-mlg">
-                        <h4 class="text-uppercase font-weight-bold text-center"> Machine Learning (Pharmacometrics) Intern @ <a
-                                href="https://www.bms.com/" target="_blank"> Bristol Myers Squibb </a> </h4>
-                        <h5 class="text-center"> Bristol Myers Squibb
-                            &nbsp;&nbsp;&nbsp; San Diego, CA &nbsp;&nbsp;&nbsp; July 2023 - Sep. 2023 </h5>
-                        <p class="small text-darkgray">
-                        <ul>
-                            <li> Employed machine learning techniques to identify key features for predicting diabetes using two distinct datasets.
-                                Investigated multiple scikit-learn classifiers, explainable AI techniques, and neural networks</li>
-                            <li> Achieved up to 86% model accuracy for smaller Pima Indians Diabetes dataset and 75% accuracy for larger Diabetes
-                                Readmission dataset.</li>
-                            <li> Implemented Generative Adversarial Networks (GANs) to augment new patient data, enhancing the project’s scope
-                                beyond feature selection </li>
-                        </ul>
-    
-                        <img class="center-img-2 es" src="./images/bms.png" alt="BMS Logo Picture"
-                            width="500">
-                        <p>
-                    </div>
-                </div>
-
-                <div class="col-lg-15">
-                    <div class="bg-white mb-4 p-4 align-items-center rounded-mlg">
-                        <h4 class="text-uppercase font-weight-bold text-center"> Product Analytics Intern @ <a
-                                href="https://www.onemedical.com/" target="_blank"> One Medical </a> </h4>
-                        <h5 class="text-center"> One Medical (Amazon)
-                            &nbsp;&nbsp;&nbsp; San Francisco, CA &nbsp;&nbsp;&nbsp; May 2023 - Aug. 2023 </h5>
-                        <p class="small text-darkgray">
-                        <ul>
-                            <li> Worked with big data to develop an efficient data model on Snowflake, aggregating patient data to enhance performance
-                                and analytical capabilities. </li>
-                            <li> Designed and published Tableau dashboards, visually representing 8 crucial success metrics sourced from Snowflake and
-                                Mixpanel. Utilized a pre-aggregated data model to ensure superior performance.</li>
-                        </ul>
-    
-                        <img class="center-img-2 es" src="./images/onemedical.png" alt="One Medical Logo Picture"
-                            width="500">
-                        <p>
-                    </div>
-                </div>
-
-                <div class="col-lg-15">
-                    <div class="bg-white mb-4 p-4 align-items-center rounded-mlg">
-                        <h4 class="text-uppercase font-weight-bold text-center"> Open Source Contributor @ <a
-                                href="https://summerofcode.withgoogle.com/" target="_blank"> Google Summer of Code </a> </h4>
-                        <h5 class="text-center"> <a href="https://oicr.on.ca/" target="_blank">Ontario Institute for Cancer Research</a>>
-                            &nbsp;&nbsp;&nbsp; Remote &nbsp;&nbsp;&nbsp; May 2023 - Sep. 2023 </h5>
-                        <p class="small text-darkgray">
-                        <ul>
-                            <li> Spearheaded implementation of a CI/CD pipeline using Argo CD, Argo Workflows, AWS, GitHub, and Jenkins.</li>
-                            <li> Successfully automated continuous integration deployments for 2 repositories using Git Hooks, with plans to expand to
-                                over 20 by the next release.</li>
-                            <li> Dockerized critical repositories in the release pipeline to reduce manual intervention, improve curator workflows, and
-                                enhance developer productivity.</li>
-                        </ul>
-    
-                        <img class="center-img-2 es" src="./images/oicr.png" alt="OICR Logo Picture"
-                            width="300">
-                        <p>
-                    </div>
-                </div>
-
-                <div class="col-lg-15">
-                    <div class="bg-white mb-4 p-4 align-items-center rounded-mlg">
-                        <h4 class="text-uppercase font-weight-bold text-center"> Undergraduate Student Researcher @ <a
-                                href="https://morimotolab.eng.ucsd.edu/" target="_blank"> Robotic and Haptic Devices Lab </a> </h4>
-                        <h5 class="text-center"> UCSD
-                            &nbsp;&nbsp;&nbsp; La Jolla, CA &nbsp;&nbsp;&nbsp; May 2023 - Aug. 2024 </h5>
-                        <p class="small text-darkgray">
-                        <ul>
-                            <li> Part of bioengineering senior design team that aims to develop a proof-of-concept demonstration of a novel vine
-                                biomedical robot which can be steered by local actuation of responsive material </li>
-                            <li> Evaluating and testing the attachment of heating actuators (LCEs) to different vine materials, and characterizing the
-                                performance of LCEs when activated using hydronic heating or pneumatic heating</li>
-                        </ul>
-    
-                        <img class="center-img-2 es" src="./images/morimoto.png" alt="Morimoto Lab Logo"
-                            width="500">
-                        <p>
-                    </div>
-                </div>
-
-                <!--  -->
-
-            <div class="col-lg-15">
-                <div class="bg-white mb-4 p-4 align-items-center rounded-mlg">
-                    <h4 class="text-uppercase font-weight-bold text-center"> Data Science Engineering Intern @ <a
-                            href="https://www.medtronic.com/us-en/index.html" target="_blank"> Medtronic </a> </h4>
-                    <h5 class="text-center"> Medtronic
-                        &nbsp;&nbsp;&nbsp; Northridge , CA &nbsp;&nbsp;&nbsp; June 2022 - Aug. 2022 </h5>
-                    <p class="small text-darkgray">
-                    <ul>
-                        <li> Further developed the Digital Twin (DT) model (works to get a set of parameter values that
-                            minimizes
-                            the amount of error between patient sensor glucose values and the fitted sensor glucose
-                            values from the
-                            DT model) for speed optimization. </li>
-                        <li> Used Python and developed on Poseidon clusters. </li>
-                        <li> Achieved 7.5x reduction in compute time with stable fitting (1.4% deviation in MARD), and
-                            stable
-                            parameter estimation -- 4% parameter variation for 10-minute step (against parameters fitted
-                            using max
-                            discretization at 1-minute steps). </li>
-                        <li> Estimated 5x cost reduction in cloud resources (AWS) at scale. </li>
+            <h3>Undergraduate Research</h3>
+            <ul class="entries">
+                <li class="entry">
+                    <div class="head"><span class="org"><a href="https://genome.ucsd.edu/" target="_blank">Systems
+                                Biology and Systems Medicine Lab</a>, UCSD</span><span class="when">Apr 2024 &ndash;
+                            Sep 2024</span></div>
+                    <div class="role">Undergraduate Researcher</div>
+                    <div class="mentor">Advisor: Shankar Subramaniam</div>
+                    <ul class="did">
+                        <li>Used computer vision (OpenCV, Cellpose) on fluorescence microscopy to characterize tumor
+                            heterogeneity in triple-negative breast cancer.</li>
                     </ul>
+                </li>
+                <li class="entry">
+                    <div class="head"><span class="org"><a href="https://morimotolab.eng.ucsd.edu/"
+                                target="_blank">Robotic and Haptic Devices Lab</a>, UCSD</span><span class="when">May
+                            2023 &ndash; Nov 2024</span></div>
+                    <div class="role">Undergraduate Researcher</div>
+                    <div class="mentor">Advisor: Tania Morimoto</div>
+                    <ul class="did">
+                        <li>Built a proof-of-concept soft vine robot steered by liquid crystal elastomer actuators
+                            (RoboSoft '25 first author).</li>
+                    </ul>
+                </li>
+                <li class="entry">
+                    <div class="head"><span class="org"><a href="https://isn.ucsd.edu/" target="_blank">Integrated
+                                Systems Neuroengineering Lab</a>, UCSD</span><span class="when">Apr 2023 &ndash; Jun
+                            2023</span></div>
+                    <div class="role">Undergraduate Researcher</div>
+                    <div class="mentor">Advisor: Gert Cauwenberghs</div>
+                    <ul class="did">
+                        <li>Modeled spiking neurons combining spike-timing-dependent plasticity with gradient-based
+                            learning for neuromorphic hardware.</li>
+                    </ul>
+                </li>
+                <li class="entry">
+                    <div class="head"><span class="org"><a href="https://www.scripps.edu/zorrilla/"
+                                target="_blank">Neurobiology of Addictive Disorders Lab</a>, Scripps
+                            Research</span><span class="when">Sep 2021 &ndash; Jun 2022</span></div>
+                    <div class="role">Undergraduate Researcher</div>
+                    <div class="mentor">Advisor: Eric Zorrilla</div>
+                    <ul class="did">
+                        <li>Applied random forest models to UK Biobank data to study genetic and dietary predictors
+                            of alcohol dependence.</li>
+                    </ul>
+                </li>
+                <li class="entry">
+                    <div class="head"><span class="org"><a href="https://jduarte.physics.ucsd.edu/"
+                                target="_blank">Particle Physics &amp; Machine Learning Lab</a>, UCSD</span><span
+                            class="when">May 2021 &ndash; Feb 2024</span></div>
+                    <div class="role">Undergraduate Researcher; <a href="https://iris-hep.org/"
+                            target="_blank">IRIS-HEP</a> Fellow (2021)</div>
+                    <div class="mentor">Advisor: Javier Duarte</div>
+                    <ul class="did">
+                        <li>Developed graph autoencoders for anomaly detection in Large Hadron Collider data,
+                            targeting FPGA deployment for the L1 trigger.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
 
-                    <img class="center-img-2 es" src="./images/medtronic-logo.png" alt="Medtronic Logo Picture"
-                        width="500">
-                    <p>
-                </div>
-            </div>
-
-            <div class="col-lg-15">
-                <div class="bg-white mb-4 p-4 align-items-center rounded-mlg">
-                    <h4 class="text-uppercase font-weight-bold text-center"> Undergaduate Student Researcher @ <a
-                            href="https://jduarte.physics.ucsd.edu/" target="_blank">Duarte Lab</a> </h4>
-                    <h5 class="text-center"> UCSD &nbsp;&nbsp;&nbsp; La Jolla, CA &nbsp;&nbsp;&nbsp; June 2021 -
-                        Feb. 2024</h4>
-                        <p class="small text-darkgray">
-                        <ul>
-                            <li> Performing anomaly detection analysis at the Duarte Lab (lab studying Particle Physics
-                                using
-                                Machine Learning) using graph-based ML models for LHC data analysis to discover exotic
-                                new physics.
-                            </li>
-                            <li> Working on development of particle graph autoencoders, unsupervised deep learning
-                                models for
-                                application in anomaly detection using Python and developed on Kubernetes clusters.</li>
-                            <li> <a href="https://iris-hep.org/">IRIS-HEP</a> fellow for summer 2021</li>
-                        </ul>
-                        <img class="center-img-2 es" src="./images/duarte-lab.JPG" width="600">
-                        <p>
-                </div>
-            </div>
-
-            <div class="col-lg-15">
-                <div class="bg-white mb-4 p-4 align-items-center rounded-mlg">
-                    <h4 class="text-uppercase font-weight-bold text-center"> Undergraduate Student Researcher @ <a
-                            href="https://www.scripps.edu/zorrilla/" target="_blank">Zorrilla Lab</a> </h4>
-                    <h5 class="text-center"> <a href="https://www.scripps.edu/" target="_blank"> Scripps Research </a>
-                        &nbsp;&nbsp;&nbsp; La Jolla, CA
-                        &nbsp;&nbsp;&nbsp; Sep. 2021 - June 2022</h4>
-                        <p class="small text-darkgray">
-                        <ul>
-                            <li> Training in bioinformatics techniques, including GWAS and whole exome sequence analysis
-                                using
-                                Python and R. </li>
-                            <li> Troubleshooting and applying code in order to perform psychiatric genetic association
-                                analysis on
-                                the UK Biobank
-                                database. For analyzing priori genes and conduct a gene variant discovery analysis </li>
-                            <li> Worked on the development of a random forest predictive model to determine if there is
-                                a
-                                relationship between a
-                                patient profile and whether they would have an alcohol related rehospitalization </li>
-                        </ul>
-                        <img class="center-img-2 es" src="./images/scripps-logo_black.png" width="800">
-                        <p>
-                </div>
-            </div>
-
-            <!-- <div class="col-lg-15">
-                <div class="bg-white mb-4 p-4 align-items-center rounded-mlg">
-                    <h4 class="text-uppercase font-weight-bold text-center"> IGNITE Fellow @ <a
-                            href="https://www.teachforamerica.org/" target="_blank">
-                            Teach For America </a> </h4>
-                    <h5 class="text-center"> Teach For America &nbsp;&nbsp;&nbsp; Remote &nbsp;&nbsp;&nbsp; Sep.
-                        2021 - Present</h4>
-                        <p class="small text-darkgray">
-                        <ul>
-                            <li>Teach For America's initiative is to let children recieve an excellent and equitable
-                                education</li>
-                            <li> My role is to help teachers educate their students by leading a small cohort of four to
-                                five
-                                students where we will review and practice class material. </li>
-                            <li> 2021-2022 school year taught 7th and 8th grade students middle school mathematics.</li>
-                            <li>2022-2023 school year teaching 3rd grade students elementary reading</li>
-                        </ul>
-                        <img class="center-img-2 es" src="./images/logo-teachforamerica.png">
-                        <p>
-                </div>
-            </div> -->
-
-            <!-- <div class="col-lg-15">
-                <div class="bg-white mb-4 p-4 align-items-center rounded-mlg">
-                    <h4 class="text-uppercase font-weight-bold text-center"> Data Science & ML Intern @ <a
-                            href="https://hindsightsolutions.net/" target="_blank"> Hindsight Technology Solutions </a>
-                    </h4>
-                    <h5 class="text-center"> Hindsight Solutions &nbsp;&nbsp;&nbsp;
-                        Remote &nbsp;&nbsp;&nbsp; June 2021 - Aug. 2021 </h4>
-                        <p class="small text-darkgray">
-                        <ul>
-                            <li>Worked on team of 4 to build a website scraper and classifier (more info in <a
-                                    href="#projects">Projects</a> section</li>
-                            <li>Completing Natural Language Processing projects using spaCy, Streamlit, AWS, and more.
-                            </li>
-                            <li>Learning about ML classifier systems, data processing and scraping, and few-shot
-                                learning.</li>
-                        </ul>
-                        <img class="center-img-2 frc" src="./images/hindsight-logo-w.png"
-                            style="background-color:#4965a0;">
-                        <p>
-                </div>
-            </div> -->
-    </section>
-
-
-
-    <!-- Text Section-->
-    <!-- TO PUT 3 IN EACH ROW - NEED TO CHANGE COL LENGTH TO 4 TO MATCH SKILLS -->
-    <section id="text" class="bg-beige">
-        <div class="container">
-            <header class="text-center mb-5">
-                <!-- <h2 class="lined text-uppercase"> Project Work </h2> -->
-                <h2 class="text-center" id="textSOF"> Project Work </h2>
-                <h4> Research, Group, and Personal projects.</h4>
-                <br>
-                <br>
-                <br>
-                <!-- <h3 class="lined text-uppercase" id="textSOF"> Software Related </h3> -->
-                <h3 class="text-center"> Software Projects </h3>
-            </header>
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="bg-white mb-4 p-4 align-items-center">
-                        <h4 class="text-uppercase font-weight-bold text-center"> <a href="https://github.com/sukikrishna/FARS" target="_blank">
-                            Fake Amazon Reviews (FARS)</a> </h4>
-                        <p class="text-darkgray"> <a href="https://github.com/sukikrishna/FARS" target="_blank">
-                                FARS</a> is a 4 person team I led to
-                            work on a Data Science/ML project upon the US Amazon Customer Reviews dataset from Amazon
-                            (2014-2015)
-                            archives to predict whether a given review is verified or unverified.
-                        </p>
-                        <p class=" text-darkgray"> Developed KNN (K-Nearest Neighbors) and Bigrams & Random Forest
-                            Classification ML
-                            models for this analysis. Optimized the KNN classifier by working on feature selection and
-                            data cleaning -
-                            achieved around 70% test accuracy for both models
-                        </p>
+        <!-- ================= SKILLS ================= -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills">
+                <div class="skill-group">
+                    <h3>Machine Learning &amp; AI</h3>
+                    <div class="chips">
+                        <span>LLM evaluation &amp; benchmarking</span><span>LLM fine-tuning</span><span>Multi-agent
+                            LLM systems</span><span>Human-AI teaming &amp; calibration</span><span>Clinical
+                            NLP</span><span>Speech &amp; translation models</span><span>Time-series
+                            forecasting</span><span>Graph neural networks</span><span>Mechanistic interpretability (sparse autoencoders)</span><span>Generative models (GANs,
+                            VAEs)</span><span>Computer vision</span><span>Reinforcement learning</span>
                     </div>
                 </div>
-
-                <div class="col-lg-6">
-                    <div class="bg-white mb-4 p-4">
-                        <h4 class="text-uppercase font-weight-bold text-center"> Interaction Network (IN) </h4>
-                        <p class=" text-darkgray"> This project under the Duarte Lab investigates a kind of type of
-                            graph-based
-                            autoencoder and randomized neural network architecture, the interaction
-                            network autoencoder and variational autoencoder (ie. CNN, DNN). The objective is to
-                            evaluate, against other
-                            kinds of autoencoder and variational autoencoder structures, to see which structures can be
-                            best optimized
-                            to fit in an FPGA (to meet L1 trigger requirements) that is also good at anomaly detection.
-                        </p>
+                <div class="skill-group">
+                    <h3>Research Methods</h3>
+                    <div class="chips">
+                        <span>Benchmark &amp; dataset design</span><span>Human-subject experiments</span><span>User
+                            studies</span><span>Statistical modeling</span><span>Uncertainty
+                            quantification</span><span>Causal interventions</span><span>Network analysis &amp; bibliometrics</span><span>Explainable AI</span><span>Risk modeling</span>
                     </div>
                 </div>
-
-                <div class="col-lg-3">
-                    <div class="bg-white mb-4 p-4">
-                        <h4 class="text-uppercase font-weight-bold text-center"> 
-                            <a
-                                href="https://github.com/sukikrishna/ParkSize_Diversity_Analysis" target="_blank">
-                                National Park Size & Diversity Analysis
-                            </a>
-                        </h4>
-                        <p class=" text-darkgray"> This <a
-                                href="https://github.com/sukikrishna/ParkSize_Diversity_Analysis" target="_blank">
-                                project
-                            </a> is a simple linear regression analysis done to look into whether there is a
-                            relationship between
-                            national park size and diversity in each park done upon open source <a
-                                href="https://www.kaggle.com/datasets" target="_blank"> Kaggle </a> datasets.</p>
+                <div class="skill-group">
+                    <h3>Languages &amp; Frameworks</h3>
+                    <div class="chips">
+                        <span>Python</span><span>PyTorch</span><span>JAX</span><span>scikit-learn</span><span>Hugging
+                            Face</span><span>pandas / NumPy</span><span>spaCy</span><span>OpenCV</span><span>R</span><span>SQL</span><span>Java</span><span>HTML
+                            / CSS</span>
                     </div>
                 </div>
-
-                <div class="col-lg-3">
-                    <div class="bg-white mb-4 p-4">
-                        <h4 class="text-uppercase font-weight-bold text-center"> 
-                            <a href="https://sukikrishna.github.io/powerOutages/" target="_blank">Power Outages Analysis</a>
-                        </h4>
-                        <p class=" text-darkgray"> This <a
-                                href="https://github.com/sukikrishna/powerOutages" target="_blank">
-                                project
-                            </a> is a simple linear regression analysis done to look into whether there is a
-                            relationship between
-                            national park size and diversity in each park done upon open source <a
-                                href="https://www.kaggle.com/datasets" target="_blank"> Kaggle </a> datasets.</p>
+                <div class="skill-group">
+                    <h3>Data &amp; Infrastructure</h3>
+                    <div class="chips">
+                        <span>AWS</span><span>Docker</span><span>Kubernetes</span><span>Argo CD &amp;
+                            Workflows</span><span>Jenkins</span><span>CI/CD</span><span>Snowflake</span><span>Tableau</span><span>Mixpanel</span><span>Git
+                            / GitHub</span>
                     </div>
-                </div>
-
-                <div class="col-lg-9">
-                    <div class="bg-white mb-4 p-4">
-                        <h4 class="text-uppercase font-weight-bold text-center"> 
-                            <a href="https://github.com/COGS108/FinalProjects-Fa21/blob/main/FinalProjectGroup055-Fa21.ipynb" target="_blank">
-                                Effects of Food Accessibility on Type II Diabetes</a></h4>
-                        <p class=" text-darkgray"> As part of 5 person team worked on 
-                            <a href="https://github.com/COGS108/FinalProjects-Fa21/blob/main/FinalProjectGroup055-Fa21.ipynb" target="_blank">project</a> that explored the prevalence of Type II
-                            diabetes in accordance to Californian adults' access to fresh foods, their race, and their gender in 2017.</p>
-                        <p class=" text-darkgray"> The ordinal data was processed into seven column elements through
-                            one-hot encoding:
-                            if they have diabetes, type of diabetes, their accessibility to fresh foods, their
-                            accessibility to
-                            affordable fresh foods, race, if they are prediabetic, and if they are a female. We
-                            performed univariate
-                            analysis to determine the distribution of data among each element as well as using
-                            multivariate analysis and
-                            scatterplot to determine the relationship between them. Furthermore, we used a decision tree
-                            in order to
-                            further analyze the relationship of diabetes and prediabetes among those other elements.
-                        </p>
-                        <p class=" text-darkgray"> Our results showed that there is a high volume of adults who have
-                            access to
-                            affordable fresh foods, however there is a higher prevalence of type II diabetes for those
-                            have greater
-                            accessibility to affordable fresh foods.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-7">
-                    <div class="bg-white mb-4 p-4 align-items-center">
-                        <h4 class="text-uppercase font-weight-bold text-center"> Song Visualizer (Spotify) </h4>
-                        <p class=" text-darkgray"> This is a project I have recently started on which by taking in a
-                            song title and
-                            corresponding artist name, will generate a rating for the overall mood/vibe of the song
-                            based on various
-                            musical indicators and the sentiment of the song lyrics.
-                        </p>
-                        <p class=" text-darkgray"> My goal is to qualitatively describe the song using an
-                            "emoji"/emotion visual so that
-                            the user can filter through what kinds of songs they want to listen to by how they're
-                            feeling. Plan to
-                            showcasethe analysis through an online web dashboard and goal for deployment for Nov 2022.
-                        </p>
-                        <p class=" text-darkgray"> Inspiration for this idea came when I was having difficulty finding
-                            songs on my
-                            playlist that were of a particular mood from an unorganized playlist (Liked Songs) by style
-                            or genre.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-lg-5">
-                    <div class="bg-white mb-4 p-4">
-                        <h4 class="text-uppercase font-weight-bold text-center">
-                            <a href="https://github.com/Hindsight-Intern/Final-Classifier"
-                                target="_blank">News Articles Classifier</a>
-                        </h4>
-                        <p class=" text-darkgray"> This <a href="https://github.com/Hindsight-Intern/Final-Classifier"
-                                target="_blank">project</a>
-                            incorporated web scraping using BeautifulSoup and predictive machine learning using a
-                            HuggingFace <a href="https://huggingface.co/facebook/bart-large"
-                                target="_blank">zero-shot-classification</a> model which would scrape
-                            an article, determine what topic that article is most correlated to and label that article
-                            under 1 of 13
-                            topic categories : "politics", "international news", "celebrity", "sports", "health",
-                            "nutrition",
-                            "fitness", "beauty", "business", "economy", "finance", "technology", "science",
-                            "lifestyle".
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="bg-white mb-4 p-4 align-items-center">
-                        <h4 class="text-uppercase font-weight-bold text-center"> Personal Portfolio </h4>
-                        <p class=" text-darkgray"> This <a href="https://github.com/sukikrishna/sukikrishna.github.io"
-                                target="_blank"> personal portfolio</a> is one of my first projects getting to work with
-                            and learn how to use HTML, CSS, and JavaScript to create a nice deliverable.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- <div class="col-lg-6">
-                    <div class="bg-white mb-4 p-4 align-items-center">
-                        <h4 class="text-uppercase font-weight-bold text-center"> Dog Breed Image Classifier </h4>
-                        <p class=" text-darkgray"> Built ML model or image classifier for dog breed classification using
-                            Tensorflow and Keras.
-                        </p>
-                    </div>
-                </div> -->
-            </div>
-
-
-            <header class="text-center mb-5">
-                <!-- <h3 class="lined text-uppercase" id="textMAE"> Mech-E / Design Related </h3> -->
-                <!-- <h3 class="text-center" id="textMAE"> Mech-E / Design Related </h3> -->
-                <h3 class="text-center"> Mech-E / Design Projects </h3>
-            </header>
-
-            <div class="col-lg-15">
-                <div class="bg-white mb-4 p-4 align-items-center">
-                    <h4 class="text-uppercase font-weight-bold text-center"> Construct-A-Thon: Demolition <a href="https://sites.google.com/eng.ucsd.edu/mae3team016fa23/home?authuser=0" target="_blank"> Robot </a> </h4>
-
-                    <img class="center-img-2 frc" src="./images/mae3robot.png"
-                        style="background-color:#4965a0;">
-                </div>
-            </div>
-
-            <div class="col-lg-15">
-                <div class="bg-white mb-4 p-4 align-items-center">
-                    <h4 class="text-uppercase font-weight-bold text-center"> <a href="/MAE 3 Clock Report [A06].pdf" target="_blank"> Bulbasaur Pendulum Clock </a> </h4>
-                </div>
-            </div>
-
-            <div class="col-lg-15">
-                <div class="bg-white mb-4 p-4 align-items-center">
-                    <h4 class="text-uppercase font-weight-bold text-center"> Amazon Redesign - Data Driven UX and
-                        Product Design <a href="amazonRedesign.html" target="_blank"> Case Study </a> </h4>
-
-                    <img class="center-img-2 frc" src="./images/amazonRedesignImages/Amazon Redesign.png"
-                        style="background-color:#4965a0;">
-                </div>
-            </div>
-
-
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="bg-white mb-4 p-4 align-items-center">
-                        <h4 class="text-uppercase font-weight-bold text-center"> VEX Robotics </h4>
-                        <p class=" text-darkgray"> <a href="https://www.vexrobotics.com/" target="_blank"> VEX Robotics
-                            </a> is a robotics competition where different teams in high school division would build a
-                            robot based on the year's game and compete.
-                        </p>
-                        <!-- <p class=" text-darkgray"> Was involved in high school robotics team for 4 years as a builder,
-                            programmer, and in media development. -->
-                        <ul class=" text-darkgray">
-                            <li>2017 - Qualified for World Championships</li>
-                            <li>2018, 2019, 2020 - Qualified for State Championships</li>
-                        </ul>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Publications Section-->
-        <!-- "class="bg-light-blue" -->
-        <section id="papers" class="bg-light-blue">
-            <div class="container">
-                <header class="text-center mb-5">
-                    <!-- <h2 class="text-uppercase">Publications</h2> -->
-                    <h2 class="text-center">Publications</h2>
-                </header>
-                <div class="bg-white mb-4 p-4 align-items-center">
-                    <h4 class="font-weight-bold text-center"> <a href="https://arxiv.org/abs/2111.12849"
-                            target="_blank">
-                            "Particle Graph Autoencoders and Differentiable, Learned Energy Mover's Distance" </a> </h4>
-                    <h5 class="text-center"> Tsan, S. et al. including S. Krishna. NeurIPS (2021)</h5>
                 </div>
             </div>
         </section>
 
-    </section>
-    <!-- Contact Section-->
-    <!-- USING FORMSPREE - need to register for an account and create new project -->
-    <section id="contact" class="bg-beige">
-        <div class="container">
-            <header class="text-center mb-5">
-                <!-- <h2 class="text-uppercase">Contact Me!</h2> -->
-                <h2 class="text-uppercase">Contact Me</h2>
-                <br>
-                <h4>Email: sukanyakrishna@g.harvard.edu ; sukanya.krishna@gmail.com</h4>
-                <br>
-                <h5> If you may have any questions for me, opportunities to share, or would like to chat, please let me
-                    know by email or by filling out the messaging form fields below! </h5>
-            </header>
-
-            <!-- CAN ADD ORGANIZATION/PROFESSION??? -->
-            <div class="row">
-                <div class="col-lg-3">
-                    <form class="contact-form" method="POST" action="https://formspree.io/f/xeqdggwo">
-                        <label for="firstName"> Name </label>
-                        <input id="firstName" type="text" name="name" placeholder="Enter First & Last Name"
-                            class="form-control">
+        <!-- ================= TEACHING & SERVICE ================= -->
+        <section id="teaching">
+            <h2>Teaching &amp; Service</h2>
+            <div class="two-col">
+                <div>
+                    <h3>Teaching</h3>
+                    <ul class="rows">
+                        <li><span class="what">Teaching Fellow, Advanced Topics in Data Science 1</span><span
+                                class="when">Fall 2026</span></li>
+                        <li><span class="what">Teaching Fellow, Advanced Topics in Data Science 2</span><span
+                                class="when">Spring 2026</span></li>
+                        <li><span class="what">Teaching Fellow, Introduction to Scientific Computing</span><span
+                                class="when">Fall 2025</span></li>
+                        <li><span class="what"><a href="https://bokcenter.harvard.edu/" target="_blank">Bok Graduate
+                                    Fellow</a>, Harvard</span><span class="when">2026 &ndash; 27</span>
+                            <span class="detail">Designing course tools and materials with faculty, including the
+                                AI-assisted grading study.</span></li>
+                        <li><span class="what">Instructional Assistant, UCSD</span><span class="when">2022 &ndash;
+                                2024</span>
+                            <span class="detail">Computational Methods in Engineering, Machine Learning II, Linear
+                                Circuits</span></li>
+                        <li><span class="what"><a href="https://www.teachforamerica.org/" target="_blank">Teach For
+                                    America</a> Ignite Fellow</span><span class="when">2021 &ndash; 2023</span>
+                            <span class="detail">Tutored small groups in middle school math and elementary
+                                reading.</span></li>
+                    </ul>
                 </div>
-
-                <div class="col-lg-4">
-                    <form class="contact-form" method="POST" action="https://formspree.io/f/xeqdggwo">
-                        <label for="lastName"> Organization/Profession </label>
-                        <input id="lastName" type="text" name="name"
-                            placeholder="i.e. Student, Software Engineer, Researcher" class="form-control">
-                </div>
-
-                <div class="form-group col-lg-5">
-                    <label for="lastName"> Email </label>
-                    <input id="lastName" type="text" name="_replyto" placeholder="Enter your email"
-                        class="form-control">
-                </div>
-
-                <!-- <div class="form-group col-lg-12">
-                  <label for="email"> Your Email</label>
-                  <input id="email" type="email" name="email" placeholder="Enter your email" class="form-control">
-                </div> -->
-                <div class="form-group col-lg-12">
-                    <label for="message"> Message </label>
-                    <textarea id="message" name="message" placeholder="Enter your message" rows="4"
-                        class="form-control"></textarea>
-                </div>
-                <div class="form-group col-lg-12">
-                    <button type="submit" value="Send" class="btn btn-outline-primary w-100">Send Form</button>
-                </div>
-            </div>
-            </form>
-
-            <!-- <ul class="mb-0 list-inline text-center">
-                <li class="list-inline-item"><a href="https://github.com/VaniSachdev"
-                        class="social-link social-link-google-plus"><i class="fab fa-github"></i></a></li>
-                <li class="list-inline-item"><a href="https://www.linkedin.com/in/vani-sachdev-7a5576178/"
-                        class="social-link social-link-instagram"><i class="fab fa-linkedin"></i></a></li>
-                <li class="list-inline-item"><a href="mailto:vsachdev@g.hmc.edu"
-                        class="social-link social-link-email"><i class="fas fa-envelope"></i></a></li>
-                <li class="list-inline-item"><a href="files/sachdev_resume.pdf" class="social-link social-link-email"><i
-                            class="fas fa-file"></i></a></li>
-            </ul> -->
-        </div>
-    </section>
-
-    <!-- Adding small section in the bottom for copyright labelmark -->
-    <footer class="py-4">
-        <div class="container">
-            <!-- <div class="row">
-                <div class="col-lg-6 text-center text-lg-left">
-                    <p class="mb-0 text-gray">&copy; 2022 Sukanya Krishna </p>
-                </div>
-                <div class="col-lg-6 text-center text-lg-right">
-                </div>
-            </div> -->
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <span class="copyright">Copyright &copy; Sukanya Krishna 2024
-                    </span>
-                </div>
-                <div class="col-md-4">
-                    <ul class="mb-0 list-inline text-center">
-                        <li class="list-inline-item"><a href="https://github.com/sukikrishna" target="_blank"
-                                class="social-link social-link-google-plus"><i class="fab fa-github"></i></a></li>
-
-                        <li class="list-inline-item"><a href="https://www.linkedin.com/in/sukanya-krishna/"
-                                target="_blank" class="social-link social-link-instagram"><i
-                                    class="fab fa-linkedin"></i></a></li>
-
-                        <!-- <li class="list-inline-item"><a href="https://www.linkedin.com/in/sukanya-krishna-a7b754198/" target="_blank"
-                                class="social-link social-link-instagram"><i class="fab fa-facebook"></i></a></li> -->
+                <div>
+                    <h3>Academic Service</h3>
+                    <ul class="rows">
+                        <li><span class="what">Organizing Committee, AgentEvalSci Workshop @ NAACL 2027</span></li>
+                        <li><span class="what">Program Committee, <a href="https://sites.google.com/view/fiirworkshop" target="_blank">FIIR Workshop</a> @ The Web Conference 2026</span></li>
+                        <li><span class="what">Program Committee, FIIR Workshop @ IEEE ICDM 2026</span></li>
+                        <li><span class="what">Reviewer, IEEE-EMBS BHI 2025 &amp; 2026</span></li>
                     </ul>
                 </div>
             </div>
+        </section>
+
+        <!-- ================= AWARDS ================= -->
+        <section id="awards">
+            <h2>Fellowships &amp; Awards</h2>
+            <ul class="rows">
+                <li><span class="what"><a
+                            href="https://blog.cosmos-institute.org/p/announcing-80-new-cosmos-grantees"
+                            target="_blank">Cosmos Institute AI x Truth-Seeking Grant</a></span><span
+                        class="when">Sep 2026</span>
+                    <span class="detail">$6,000 grant, awarded in partnership with FIRE, for <i>Early Detection of
+                        Emergent Collective Behaviour</i>, a toolkit detecting and testing emergent coordination among
+                        AI agents.</span></li>
+                <li><span class="what"><a href="https://www.gemfellowship.org/" target="_blank">GEM Fellowship</a></span><span class="when">2026</span>
+                    <span class="detail">The National GEM Consortium, sponsored by IBM Research.</span></li>
+                <li><span class="what">Harvard Bok Graduate Fellow</span><span class="when">2026 &ndash;
+                        27</span></li>
+                <li><span class="what">Porthcawl Innovation Fund, Harvard SEAS</span><span
+                        class="when">2025</span></li>
+                <li><span class="what">Harvard SEAS Prize Fellowship</span><span class="when">2024</span></li>
+                <li><span class="what">Outstanding Academic Achievement Award in Bioengineering, UCSD
+                        (Valedictorian)</span><span class="when">2024</span></li>
+                <li><span class="what"><a href="https://iris-hep.org/" target="_blank">IRIS-HEP</a> Undergraduate
+                        Fellowship</span><span class="when">2021</span></li>
+                <li><span class="what">Rotary Club of Murrieta Academic Scholarship</span><span
+                        class="when">2020</span></li>
+                <li><span class="what">Thurgood Marshall College Provost Honors, UCSD</span><span
+                        class="when">2020 &ndash; 2024</span></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="wrap">
+            Sukanya Krishna<br>
+            Harvard John A. Paulson School of Engineering and Applied Sciences<br>
+            <a href="mailto:sukanyakrishna@g.harvard.edu">sukanyakrishna@g.harvard.edu</a>
+            <p>Last updated October 2026.</p>
+        </div>
     </footer>
 
-    <!-- JavaScript files-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="vendor/lightbox2/js/lightbox.min.js"></script>
-    <script src="vendor/smooth-scroll/smooth-scroll.polyfills.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"> </script>
-    <script src="js/front.js"></script>
-
-    <!-- Script to add icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script>
+        // Theme filter for the Current Research cards
+        document.querySelectorAll('.filters button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const f = btn.dataset.filter;
+                document.querySelectorAll('.filters button').forEach(b => b.setAttribute('aria-pressed', b === btn));
+                document.querySelectorAll('.projects .card').forEach(card => {
+                    card.hidden = f !== 'all' && !card.dataset.themes.split(' ').includes(f);
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
-
-<!-- https://www.educba.com/html-vs-javascript/ -->
