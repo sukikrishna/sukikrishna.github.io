@@ -1,0 +1,139 @@
+/* Beyond Research: scrapbook / collage page */
+
+:root {
+  --hand: "Caveat", "Segoe Print", cursive;
+  --paper: #fffdf8;
+  --ink: #2c2a26;
+}
+
+body.life {
+  background:
+    radial-gradient(var(--line) 1.2px, transparent 1.2px) 0 0 / 22px 22px,
+    var(--bg);
+}
+
+/* ---------- intro ---------- */
+.life-hero { padding-top: 48px; max-width: 680px; }
+.life-hero .back { font-size: 0.85rem; color: var(--muted); display: inline-flex; align-items: center; gap: 8px; }
+.life-hero .back:hover { color: var(--accent); text-decoration: none; }
+.life-hero h1 { font-size: 2.7rem; font-weight: 500; letter-spacing: -0.01em; margin: 12px 0 0; }
+.scrawl {
+  font-family: var(--hand); font-size: 1.9rem; color: var(--accent);
+  margin: -4px 0 14px 4px; transform: rotate(-2deg); transform-origin: left;
+}
+.life-intro { font-size: 1.06rem; margin: 0; }
+.hint { color: var(--muted); font-size: 0.88rem; margin: 14px 0 0; }
+.hint i { color: var(--accent); margin-right: 4px; }
+
+/* ---------- boards ---------- */
+.board { padding: 36px 0 0; }
+.board .label {
+  display: inline-block; font-family: var(--hand); font-weight: 700; font-size: 2.4rem;
+  color: var(--text); border: none; margin: 0 0 6px; padding: 0 10px;
+  transform: rotate(-2deg);
+  background: linear-gradient(transparent 58%, var(--accent-soft) 58%, var(--accent-soft) 92%, transparent 92%);
+}
+
+.collage {
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+  gap: 26px 14px; padding: 18px 0 24px;
+}
+
+.pin {
+  position: relative; margin: 0;
+  transform: translateY(var(--y, 0)) rotate(var(--r, 0deg));
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 10px 24px rgba(0, 0, 0, 0.10);
+}
+
+/* ---------- polaroids ---------- */
+.photo {
+  all: unset; box-sizing: border-box; position: relative; display: block; cursor: pointer;
+  width: var(--w, 260px); padding: 10px 10px 0; background: var(--paper);
+  transform: translateY(var(--y, 0)) rotate(var(--r, 0deg));
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+.photo img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.photo img.portrait { aspect-ratio: 3 / 4; }
+.photo img.square { aspect-ratio: 1; }
+.photo .cap {
+  display: block; text-align: center; font-family: var(--hand); font-size: 1.4rem;
+  color: var(--ink); padding: 4px 4px 8px; line-height: 1.2;
+}
+/* washi tape */
+.photo::before {
+  content: ""; position: absolute; top: -12px; left: 50%; width: 92px; height: 26px; z-index: 1;
+  transform: translateX(-50%) rotate(-4deg);
+  background: rgba(165, 28, 48, 0.22);
+  background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.25) 0 6px, transparent 6px 12px);
+}
+.photo:nth-of-type(3n+2)::before { background-color: rgba(70, 140, 190, 0.28); transform: translateX(-50%) rotate(3deg); }
+.photo:nth-of-type(3n)::before { background-color: rgba(230, 190, 60, 0.35); transform: translateX(-50%) rotate(-1deg); }
+
+.photo:hover, .photo:focus-visible {
+  z-index: 3; transform: translateY(var(--y, 0)) rotate(0deg) scale(1.04);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 18px 40px rgba(0, 0, 0, 0.2);
+}
+.photo:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+
+/* ---------- sticky notes ---------- */
+.note {
+  width: 178px; min-height: 150px; padding: 26px 16px 18px;
+  font-family: var(--hand); font-size: 1.55rem; line-height: 1.15; color: var(--ink);
+  display: flex; flex-direction: column; justify-content: center;
+}
+.note span { color: #6b665d; }
+.note .ko { font-family: "Nanum Pen Script", var(--hand); font-size: 1.9rem; color: var(--ink); }
+.note::before {
+  content: ""; position: absolute; top: 9px; left: 50%; width: 12px; height: 12px; border-radius: 50%;
+  transform: translateX(-50%); background: var(--accent);
+  box-shadow: inset -2px -2px 0 rgba(0, 0, 0, 0.25), 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+.note.yellow { background: #fff1a6; }
+.note.pink { background: #ffd5dd; }
+.note.blue { background: #d3e8fb; }
+.note.green { background: #d9f0cf; }
+
+/* ---------- story view ---------- */
+.story-view {
+  width: min(880px, 92vw); max-height: 90vh; padding: 0; border: none; border-radius: 4px;
+  background: var(--paper); color: var(--ink); overflow: auto;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+.story-view::backdrop { background: rgba(20, 20, 22, 0.72); }
+.sv-page { display: grid; grid-template-columns: 1.25fr 1fr; }
+.sv-page img { display: block; width: 100%; height: min(72vh, 560px); object-fit: cover; }
+.sv-text { padding: 36px 30px 28px; display: flex; flex-direction: column; }
+.sv-group { font-family: var(--hand); font-size: 1.3rem; color: var(--accent); }
+.story-view h3 {
+  font-family: var(--hand); font-size: 2.4rem; font-weight: 700; color: var(--ink);
+  text-transform: none; letter-spacing: 0; margin: 0 0 12px; line-height: 1.1;
+}
+.story-view p { margin: 0; font-size: 1rem; line-height: 1.65; }
+.sv-nav { margin-top: auto; padding-top: 24px; display: flex; gap: 10px; }
+.story-view button {
+  font: inherit; cursor: pointer; width: 40px; height: 40px; border-radius: 50%;
+  display: grid; place-items: center; border: 1px solid #d8d3c8; background: transparent; color: var(--ink);
+}
+.story-view button:hover { border-color: #a51c30; color: #a51c30; }
+.sv-close { position: absolute; top: 12px; right: 12px; background: var(--paper) !important; z-index: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .pin, .photo { transition: none; }
+}
+
+@media (max-width: 760px) {
+  .life-hero { padding-top: 28px; }
+  .life-hero h1 { font-size: 1.9rem; }
+  .board .label { font-size: 2rem; }
+  .collage { gap: 22px 10px; }
+  .pin, .photo { transform: translateY(calc(var(--y, 0px) * 0.3)) rotate(var(--r, 0deg)); }
+  .photo { width: min(var(--w, 260px), 41vw); padding: 7px 7px 0; }
+  .photo .cap { font-size: 1.15rem; }
+  .note { width: min(160px, 41vw); min-height: 128px; font-size: 1.3rem; padding: 24px 12px 14px; }
+  .sv-page { grid-template-columns: 1fr; }
+  .sv-page img { height: 46vh; }
+  .sv-text { padding: 20px 20px 22px; }
+  .story-view h3 { font-size: 2rem; }
+}

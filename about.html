@@ -6,19 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Beyond Research | Sukanya Krishna</title>
     <meta name="description"
-        content="Outside the lab: Sukanya Krishna's hobbies, from figure skating and climbing to crochet, baking, hiking, and puzzle nights.">
+        content="Outside the lab: a scrapbook of Sukanya Krishna's hobbies, from hiking and bird watching to baking, crochet, and puzzle nights.">
     <link rel="icon" href="images/favicon.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Nanum+Pen+Script&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/life.css">
 </head>
 
-<body>
+<body class="life">
 
     <nav class="nav">
         <div class="wrap">
@@ -39,152 +40,164 @@
         <header class="life-hero">
             <a class="back" href="index.html"><i class="fa-solid fa-arrow-left"></i> Research &amp; publications</a>
             <h1>Beyond Research</h1>
+            <p class="scrawl">the here &amp; now</p>
             <p class="life-intro">
                 Outside of school and tech, I love trying new things and saying yes to a little adventure. In
                 undergrad that meant starting to learn Korean; since moving to Boston, it's been figure skating
                 (badly) and climbing (even more badly). Most of what's below I do casually, for the fun of
                 learning something new or spending time with friends.
             </p>
+            <p class="hint"><i class="fa-regular fa-hand-pointer"></i> Tap a photo for the story behind it.</p>
         </header>
 
-        <!-- ================= HOBBIES ================= -->
-        <section id="hobbies">
-            <h2>Things I've Picked Up</h2>
-            <p class="lede">An expert at none of them, and that's kind of the point.</p>
+        <!--
+            Each .pin is either a photo (button with a hidden .story) or a sticky note.
+            --r = tilt, --w = width, --y = nudge up/down. The story text is what opens on click.
+        -->
 
-            <h3>On the trail</h3>
-            <div class="hobbies">
-                <div class="hobby">
-                    <i class="fa-solid fa-person-hiking"></i>
-                    <div><b>Hiking</b><span>Trails, summits, and views that make the climb worth it.</span></div>
-                </div>
-                <div class="hobby">
-                    <i class="fa-solid fa-dove"></i>
-                    <div><b>Bird watching</b><span>Coolest sighting on a trail so far: a great blue heron perched
-                            at the top of a tree.</span></div>
-                </div>
-                <div class="hobby">
-                    <i class="fa-solid fa-camera"></i>
-                    <div><b>Photography</b><span>Capturing trail views and the birds I spot along the
-                            way.</span></div>
-                </div>
-            </div>
+        <!-- ================= LATELY ================= -->
+        <section class="board" aria-labelledby="lately">
+            <h2 class="label" id="lately">lately</h2>
+            <div class="collage">
+                <p class="pin note yellow" style="--r:-4deg; --y:10px">learning to figure skate <span>(badly)</span></p>
 
-            <h3>Trying something new</h3>
-            <div class="hobbies">
-                <div class="hobby">
-                    <i class="fa-solid fa-person-skating"></i>
-                    <div><b>Figure skating</b><span>Picked up after moving to Boston. Enthusiasm well ahead of
-                            technique.</span></div>
-                </div>
-                <div class="hobby">
-                    <i class="fa-solid fa-mountain"></i>
-                    <div><b>Climbing</b><span>Also new since Boston, and somehow going even worse than the
-                            skating.</span></div>
-                </div>
-                <div class="hobby">
-                    <i class="fa-solid fa-language"></i>
-                    <div><b>Languages</b><span>I like learning new ones; I started Korean in
-                            undergrad.</span></div>
-                </div>
-            </div>
+                <button type="button" class="pin photo" style="--r:2.5deg; --w:230px">
+                    <img src="images/life/crochet.jpg" alt="A cream-colored crocheted top with a textured flared body"
+                        class="portrait" loading="lazy">
+                    <span class="cap">made it, wearing it</span>
+                    <span class="story" hidden>
+                        <b>A top I crocheted</b>
+                        Crochet is my favorite kind of project: slow, a little meditative, and at the end you get to
+                        wear the thing you made. This top is one of mine.
+                    </span>
+                </button>
 
-            <h3>Making &amp; sharing</h3>
-            <div class="hobbies">
-                <div class="hobby">
-                    <i class="fa-solid fa-mitten"></i>
-                    <div><b>Crochet</b><span>Making things I can actually wear.</span></div>
-                </div>
-                <div class="hobby">
-                    <i class="fa-solid fa-cookie-bite"></i>
-                    <div><b>Baking</b><span>Mostly an excuse to share treats. A friend and I once ran a
-                            mini bakery for a day: six hours of baking, then everyone came to try it all.</span></div>
-                </div>
-                <div class="hobby">
-                    <i class="fa-solid fa-puzzle-piece"></i>
-                    <div><b>Puzzle &amp; game nights</b><span>Hosting friends for puzzles, board games, and
-                            snacks.</span></div>
-                </div>
-            </div>
+                <p class="pin note pink" style="--r:3deg; --y:-14px">climbing <span>(even more badly)</span></p>
 
-            <h3>Winding down</h3>
-            <div class="hobbies">
-                <div class="hobby">
-                    <i class="fa-solid fa-headphones"></i>
-                    <div><b>Music</b><span>What I put on to cool down and relax.</span></div>
-                </div>
-                <div class="hobby">
-                    <i class="fa-solid fa-tv"></i>
-                    <div><b>Anime</b><span>A favorite way to unwind after a long week.</span></div>
-                </div>
-                <div class="hobby">
-                    <i class="fa-solid fa-book-open"></i>
-                    <div><b>Reading</b><span>There's usually a book in progress.</span></div>
-                </div>
+                <p class="pin note blue" style="--r:-2deg; --y:24px"><span class="ko">안녕하세요!</span> learning Korean,
+                    on and off since undergrad</p>
+
+                <p class="pin note green" style="--r:4deg; --y:-6px">wind-down mode: music on, anime queued, a book in
+                    progress</p>
             </div>
         </section>
 
-        <!-- ================= GALLERY ================= -->
-        <section id="photos">
-            <h2>Photos</h2>
-            <p class="lede">Click any photo to enlarge.</p>
+        <!-- ================= ON THE TRAIL ================= -->
+        <section class="board" aria-labelledby="trail">
+            <h2 class="label" id="trail">out on the trail</h2>
+            <div class="collage">
+                <button type="button" class="pin photo" style="--r:-3deg; --w:330px">
+                    <img src="images/life/hike-summit.jpg"
+                        alt="Suki smiling in a selfie on a rocky ridge above treeline, mountains behind" loading="lazy">
+                    <span class="cap">windblown + happy</span>
+                    <span class="story" hidden>
+                        <b>Above treeline</b>
+                        Windblown hair, tired legs, and the kind of view that makes every switchback worth it.
+                    </span>
+                </button>
 
-            <div class="gallery">
-                <figure class="wide">
-                    <button type="button"><img src="images/life/hike-summit.jpg" loading="lazy"
-                            alt="Suki smiling in a selfie on a rocky ridge above treeline, mountains behind"></button>
-                    <figcaption>Above treeline</figcaption>
-                </figure>
-                <figure class="tall">
-                    <button type="button"><img src="images/life/baking.jpg" loading="lazy"
-                            alt="A table of baked goods: a green pancake stack topped with cream and berries, cookies, and muffins"></button>
-                    <figcaption>Our one-day mini bakery</figcaption>
-                </figure>
-                <figure class="tall">
-                    <button type="button"><img src="images/life/crochet.jpg" loading="lazy"
-                            alt="A cream-colored crocheted top with a textured flared body"></button>
-                    <figcaption>A crocheted top</figcaption>
-                </figure>
-                <figure class="wide">
-                    <button type="button"><img src="images/life/hike-lake.jpg" loading="lazy"
-                            alt="A lake surrounded by mountains, seen from a forested trail"></button>
-                    <figcaption>A lake view from the trail</figcaption>
-                </figure>
-                <figure class="wide">
-                    <button type="button"><img src="images/life/hike-ridge.jpg" loading="lazy"
-                            alt="Rolling mountain ranges with autumn colors under a clear sky"></button>
-                    <figcaption>Fall colors from the summit</figcaption>
-                </figure>
-                <figure class="tall solo">
-                    <button type="button"><img src="images/life/puzzles.jpg" loading="lazy"
-                            alt="Friends gathered around a table working on a large jigsaw puzzle"></button>
-                    <figcaption>Puzzle night</figcaption>
-                </figure>
-                <figure class="half">
-                    <button type="button"><img src="images/life/heron.jpg" loading="lazy"
-                            alt="A great blue heron standing at the top of a leafy tree against a pale sky"></button>
-                    <figcaption>Great blue heron</figcaption>
-                </figure>
-                <figure class="half">
-                    <button type="button"><img src="images/life/yellowthroat.jpg" loading="lazy"
-                            alt="A small olive bird with a yellow throat and black mask perched among branches over water"></button>
-                    <figcaption>Common yellowthroat</figcaption>
-                </figure>
+                <button type="button" class="pin photo" style="--r:4deg; --w:230px; --y:30px">
+                    <img src="images/life/heron.jpg" alt="A great blue heron standing at the top of a leafy tree"
+                        class="square" loading="lazy">
+                    <span class="cap">look up!</span>
+                    <span class="story" hidden>
+                        <b>The great blue heron</b>
+                        The coolest bird I've seen on a trail so far: a great blue heron perched right at the top of a
+                        tree. Not where I expected to find a wading bird, and it's why I keep looking up when I hike.
+                    </span>
+                </button>
+
+                <p class="pin note green" style="--r:-5deg; --y:-10px">bird count is going up. binoculars are now
+                    trail essentials</p>
+
+                <button type="button" class="pin photo" style="--r:1.5deg; --w:300px; --y:-20px">
+                    <img src="images/life/hike-ridge.jpg"
+                        alt="Rolling mountain ranges with autumn colors under a clear sky" loading="lazy">
+                    <span class="cap">ridges for days</span>
+                    <span class="story" hidden>
+                        <b>Fall from the summit</b>
+                        Layer after layer of ridgelines, with the fall colors just coming in down in the valleys.
+                    </span>
+                </button>
+
+                <button type="button" class="pin photo" style="--r:-4deg; --w:210px">
+                    <img src="images/life/yellowthroat.jpg"
+                        alt="A small olive bird with a yellow throat and black mask perched among branches over water"
+                        class="square" loading="lazy">
+                    <span class="cap">tiny + yellow</span>
+                    <span class="story" hidden>
+                        <b>A common yellowthroat</b>
+                        Photographed through my binoculars, which is about the only way to catch these tiny birds
+                        before they disappear back into the branches.
+                    </span>
+                </button>
+
+                <button type="button" class="pin photo" style="--r:2deg; --w:320px; --y:16px">
+                    <img src="images/life/hike-lake.jpg" alt="A lake surrounded by mountains, seen from a forested trail"
+                        loading="lazy">
+                    <span class="cap">worth the climb</span>
+                    <span class="story" hidden>
+                        <b>A lake view from the trail</b>
+                        The trees opened up just enough to see the lake and mountains behind it. Photography for me is
+                        mostly this: stopping to catch moments like these along the way.
+                    </span>
+                </button>
+            </div>
+        </section>
+
+        <!-- ================= WITH FRIENDS ================= -->
+        <section class="board" aria-labelledby="friends">
+            <h2 class="label" id="friends">with friends</h2>
+            <div class="collage">
+                <button type="button" class="pin photo" style="--r:-3deg; --w:260px">
+                    <img src="images/life/baking.jpg"
+                        alt="A table of baked goods: a green pancake stack topped with cream and berries, cookies, and muffins"
+                        class="portrait" loading="lazy">
+                    <span class="cap">the mini bakery</span>
+                    <span class="story" hidden>
+                        <b>A bakery for a day</b>
+                        The most I've ever baked in one go. A friend and I decided to have a baking session and ran a
+                        mini bakery for a day: six hours of baking, then we invited everyone over to try the treats.
+                    </span>
+                </button>
+
+                <p class="pin note pink" style="--r:5deg; --y:-24px">bake &rarr; share &rarr; repeat</p>
+
+                <button type="button" class="pin photo" style="--r:3deg; --w:260px; --y:20px">
+                    <img src="images/life/puzzles.jpg"
+                        alt="Friends gathered around a table working on a large jigsaw puzzle" class="portrait"
+                        loading="lazy">
+                    <span class="cap">puzzle night</span>
+                    <span class="story" hidden>
+                        <b>Puzzle night</b>
+                        I often host puzzle and board game nights. This one was a Paris street scene with a whole lot
+                        of night sky, which is always the hardest part.
+                    </span>
+                </button>
+
+                <p class="pin note yellow" style="--r:-3deg; --y:-30px">come for the snacks, stay for the last 50
+                    pieces</p>
             </div>
         </section>
 
     </main>
 
-    <dialog class="lightbox" aria-label="Photo viewer">
-        <button type="button" class="lb-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
-        <button type="button" class="lb-nav lb-prev" aria-label="Previous photo"><i
-                class="fa-solid fa-chevron-left"></i></button>
-        <figure>
+    <dialog class="story-view" aria-label="Photo story">
+        <button type="button" class="sv-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        <div class="sv-page">
             <img alt="">
-            <figcaption></figcaption>
-        </figure>
-        <button type="button" class="lb-nav lb-next" aria-label="Next photo"><i
-                class="fa-solid fa-chevron-right"></i></button>
+            <div class="sv-text">
+                <span class="sv-group"></span>
+                <h3></h3>
+                <p></p>
+                <div class="sv-nav">
+                    <button type="button" class="sv-prev" aria-label="Previous photo"><i
+                            class="fa-solid fa-arrow-left"></i></button>
+                    <button type="button" class="sv-next" aria-label="Next photo"><i
+                            class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
     </dialog>
 
     <footer>
@@ -197,30 +210,32 @@
     </footer>
 
     <script>
-        // Lightbox for the photo gallery
-        const figs = [...document.querySelectorAll('.gallery figure')];
-        const box = document.querySelector('.lightbox');
-        const boxImg = box.querySelector('img');
-        const boxCap = box.querySelector('figcaption');
+        // Click a photo to open its story
+        const photos = [...document.querySelectorAll('.pin.photo')];
+        const view = document.querySelector('.story-view');
         let current = 0;
 
         function show(i) {
-            current = (i + figs.length) % figs.length;
-            const img = figs[current].querySelector('img');
-            boxImg.src = img.src;
-            boxImg.alt = img.alt;
-            boxCap.textContent = figs[current].querySelector('figcaption').textContent;
+            current = (i + photos.length) % photos.length;
+            const p = photos[current];
+            const img = p.querySelector('img');
+            const story = p.querySelector('.story');
+            view.querySelector('img').src = img.src;
+            view.querySelector('img').alt = img.alt;
+            view.querySelector('.sv-group').textContent = p.closest('.board').querySelector('.label').textContent;
+            view.querySelector('h3').textContent = story.querySelector('b').textContent;
+            view.querySelector('p').textContent = story.lastChild.textContent.trim();
         }
 
-        figs.forEach((fig, i) => fig.querySelector('button').addEventListener('click', () => {
+        photos.forEach((p, i) => p.addEventListener('click', () => {
             show(i);
-            box.showModal();
+            view.showModal();
         }));
-        box.querySelector('.lb-prev').addEventListener('click', () => show(current - 1));
-        box.querySelector('.lb-next').addEventListener('click', () => show(current + 1));
-        box.querySelector('.lb-close').addEventListener('click', () => box.close());
-        box.addEventListener('click', e => { if (e.target === box) box.close(); });
-        box.addEventListener('keydown', e => {
+        view.querySelector('.sv-prev').addEventListener('click', () => show(current - 1));
+        view.querySelector('.sv-next').addEventListener('click', () => show(current + 1));
+        view.querySelector('.sv-close').addEventListener('click', () => view.close());
+        view.addEventListener('click', e => { if (e.target === view) view.close(); });
+        view.addEventListener('keydown', e => {
             if (e.key === 'ArrowLeft') show(current - 1);
             if (e.key === 'ArrowRight') show(current + 1);
         });
