@@ -171,21 +171,7 @@ footer { margin-top: 56px; line-height: 1.6; padding: 24px 0 40px; border-top: 1
   .links .full { display: none; }
   .links .short { display: inline; }
   .hero h1 { font-size: 1.9rem; }
-  .projects, /* ---------- experience entries ---------- */
-.entries { list-style: none; margin: 0; padding: 0; }
-.entry { padding: 14px 0; border-bottom: 1px solid var(--line); }
-.entry:last-child { border-bottom: none; }
-.entry .head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
-.entry .org { font-weight: 600; font-size: 1.02rem; }
-.entry .org a { color: var(--text); border-bottom: 1px solid var(--line); }
-.entry .org a:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
-.entry .when { color: var(--muted); font-family: var(--mono); font-size: 0.78rem; white-space: nowrap; }
-.entry .role { font-style: italic; }
-.entry .mentor { font-size: 0.9rem; color: var(--muted); }
-.entry .did { margin: 6px 0 0; padding-left: 18px; font-size: 0.92rem; }
-.entry .did li { margin: 2px 0; }
-
-.two-col { grid-template-columns: 1fr; }
+  .projects, .two-col { grid-template-columns: 1fr; }
   .pub { grid-template-columns: 1fr; gap: 6px; }
   .venue { justify-self: start; }
   .news li { grid-template-columns: 1fr; gap: 0; }
@@ -222,3 +208,77 @@ footer { margin-top: 56px; line-height: 1.6; padding: 24px 0 40px; border-top: 1
   background: var(--surface); border: 1px solid var(--line);
 }
 @media (max-width: 760px) { .skills { grid-template-columns: 1fr; } }
+
+/* ---------- beyond research page ---------- */
+.nav ul a[aria-current="page"] { color: var(--accent); }
+
+.more-link {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 4px;
+  font-size: 0.92rem; font-weight: 500; padding: 6px 14px;
+  border: 1px solid var(--accent); border-radius: 999px;
+}
+.more-link:hover { background: var(--accent); color: #fff; text-decoration: none; }
+
+.life-hero { padding-top: 48px; max-width: 700px; }
+.life-hero .back { font-size: 0.85rem; color: var(--muted); display: inline-flex; align-items: center; gap: 8px; }
+.life-hero .back:hover { color: var(--accent); text-decoration: none; }
+.life-hero h1 { font-size: 2.7rem; font-weight: 500; letter-spacing: -0.01em; margin: 12px 0 12px; }
+.life-intro { font-size: 1.08rem; margin: 0; }
+
+.hobbies { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.hobby {
+  display: flex; gap: 14px; align-items: flex-start;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px;
+}
+.hobby i {
+  flex: none; width: 38px; height: 38px; display: grid; place-items: center;
+  border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-size: 1rem;
+}
+.hobby b { display: block; font-family: var(--serif); font-size: 1.08rem; font-weight: 600; }
+.hobby span { display: block; font-size: 0.86rem; color: var(--muted); line-height: 1.5; }
+
+.gallery { display: grid; grid-template-columns: repeat(10, 1fr); grid-auto-rows: 340px; gap: 12px; }
+.gallery figure { margin: 0; position: relative; border-radius: 10px; overflow: hidden; background: var(--tag); }
+.gallery .wide { grid-column: span 6; }
+.gallery .tall { grid-column: span 4; }
+.gallery .half { grid-column: span 5; }
+.gallery button { all: unset; display: block; width: 100%; height: 100%; cursor: zoom-in; }
+.gallery button:focus-visible { outline: 3px solid var(--accent); outline-offset: -3px; }
+.gallery img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.gallery figure:hover img { transform: scale(1.03); }
+.gallery figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0; pointer-events: none;
+  padding: 28px 14px 10px; color: #fff; font-size: 0.86rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.55));
+}
+
+.lightbox {
+  border: none; padding: 0; background: transparent; max-width: 100vw; max-height: 100vh;
+  width: 100vw; height: 100vh; display: none; align-items: center; justify-content: center;
+}
+.lightbox[open] { display: flex; }
+.lightbox::backdrop { background: rgba(10, 10, 12, 0.88); }
+.lightbox figure { margin: 0; text-align: center; }
+.lightbox img { max-width: 86vw; max-height: 82vh; border-radius: 8px; display: block; }
+.lightbox figcaption { color: #eee; font-size: 0.92rem; margin-top: 10px; }
+.lightbox button {
+  font: inherit; cursor: pointer; border: none; color: #fff; background: rgba(255, 255, 255, 0.12);
+  width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; flex: none;
+}
+.lightbox button:hover { background: rgba(255, 255, 255, 0.25); }
+.lb-close { position: absolute; top: 16px; right: 16px; }
+.lb-nav { margin: 0 12px; }
+
+@media (max-width: 760px) {
+  .life-hero { padding-top: 28px; }
+  .life-hero h1 { font-size: 1.9rem; }
+  .hobbies { grid-template-columns: 1fr; }
+  .gallery { grid-template-columns: 1fr 1fr; grid-auto-rows: 200px; gap: 8px; }
+  .gallery .wide { grid-column: span 2; }
+  .gallery .tall, .gallery .half { grid-column: span 1; }
+  .gallery .solo { grid-column: span 2; grid-row: span 2; }
+  .lb-nav { position: absolute; bottom: 20px; }
+  .lb-prev { left: calc(50% - 56px); }
+  .lb-next { right: calc(50% - 56px); }
+  .lightbox img { max-width: 94vw; max-height: 74vh; }
+}
