@@ -72,12 +72,12 @@
                         Lab</a> at <a href="https://mila.quebec/en" target="_blank">Mila</a>.
                 </p>
                 <p>
-                    I study how AI systems can support human judgment and decision-making in high-stakes settings,
-                    and what happens when they fail: when models hallucinate, are manipulated, or communicate
-                    confidence they shouldn't have, and how people respond.
-                    My work spans <b>human-AI complementarity and oversight</b>, <b>epistemic integrity and
-                    fact-checking</b> with LLMs, <b>vulnerabilities and emergent behavior in multi-agent AI systems</b>,
-                    <b>interpretability</b>, and <b>AI for public health and medicine</b>.
+                    I study <mark class="rq">how AI systems can support human judgment and decision-making in
+                    high-stakes settings, and what happens when they fail</mark>: when models hallucinate, are manipulated,
+                    or communicate confidence they shouldn't have, and how people respond.
+                    My work spans <b>multi-agent AI safety</b> (vulnerabilities and emergent behavior),
+                    <b>interpretability</b>, <b>human-AI complementarity</b> and oversight, <b>epistemic
+                    integrity</b> and fact-checking with LLMs, and <b>AI for health</b>.
                 </p>
                 <p>
                     Before Harvard, I earned a B.S. in <a href="https://be.ucsd.edu/" target="_blank">Bioengineering</a> from UC San Diego (valedictorian, summa cum laude)
@@ -140,7 +140,47 @@
 
             <div class="projects">
 
-                <article class="card" data-themes="safety hai">
+                <article class="card" data-themes="safety">
+                    <h4>CollectiveScope: Detecting Emergent Behavior in Multi-Agent AI</h4>
+                    <div class="meta">
+                        <span>Funded by a <a href="https://blog.cosmos-institute.org/p/announcing-80-new-cosmos-grantees"
+                                target="_blank">Cosmos Institute AI x Truth-Seeking grant</a> (2026)</span>
+                    </div>
+                    <p>As AI systems increasingly act as groups of interacting agents, risky coordination can emerge
+                        that no single agent was designed for. CollectiveScope detects the onset of emergent
+                        collective behavior, identifies which agents drive it, and causally validates that
+                        attribution through targeted interventions.</p>
+                    <div class="foot"><span class="tag">AI Safety &amp; Evaluation</span><a class="btn" href="https://github.com/sukikrishna/emergent_collective_behavior"
+                            target="_blank">Code</a></div>
+                </article>
+
+                <article class="card" data-themes="safety">
+                    <h4>INFERBench: Cross-System Vulnerability Reasoning</h4>
+                    <div class="meta">
+                        <span><a href="https://research.ibm.com/" target="_blank">IBM Research</a>, IT Automation
+                            team</span>
+                        <span>Mentors: Raju Pavuluri, Yu Deng, Rahul Krishna, Saurabh Jha</span>
+                    </div>
+                    <p>A benchmark testing whether AI agents can identify vulnerability chains that span realistic
+                        enterprise systems (application code, secrets, infrastructure-as-code, cloud/IAM, network
+                        policy, and agentic API trust) rather than a single vulnerable program.</p>
+                    <div class="foot"><span class="tag">AI Safety &amp; Evaluation</span></div>
+                </article>
+
+                <article class="card" data-themes="safety">
+                    <h4>Mechanistic Interpretability of ECG Foundation Models</h4>
+                    <div class="meta">
+                        <span>Harvard SEAS</span>
+                    </div>
+                    <p>Do independently trained ECG foundation models learn shared, reproducible representations of
+                        the same clinical concepts, or do apparent "clinical features" depend on architecture, seed,
+                        dataset, and method? Using sparse autoencoders and causal tests, I also ask whether a
+                        clinical concept is partly a demographic one.</p>
+                    <div class="foot"><span class="tag">AI Safety &amp; Evaluation</span><a class="btn" href="https://github.com/sukikrishna/ecg_mechinterp"
+                            target="_blank">Code</a></div>
+                </article>
+
+                <article class="card" data-themes="hai">
                     <h4>Epistemic Integrity &amp; AI Fact-Checking</h4>
                     <div class="meta">
                         <span>Harvard SEAS and <a href="https://www.complexdatalab.com/" target="_blank">Complex Data
@@ -157,55 +197,9 @@
                         fact-checking assistant, and its browser extension, and study why fact-checking evaluation
                         must separate ambiguous claims from genuine system failures.</p>
                     <div class="foot">
-                        <span class="tag">LLM evaluation</span><span class="tag">user studies</span>
-                        <a class="btn" href="https://www.veri-fact.ai/" target="_blank">Demo</a>
+                        <span class="tag">Human-AI Interaction</span><a class="btn" href="https://www.veri-fact.ai/" target="_blank">Demo</a>
                         <a class="btn" href="https://arxiv.org/abs/2506.15794" target="_blank">Paper</a>
                     </div>
-                </article>
-
-                <article class="card" data-themes="safety">
-                    <h4>INFERBench: Cross-System Vulnerability Reasoning</h4>
-                    <div class="meta">
-                        <span><a href="https://research.ibm.com/" target="_blank">IBM Research</a>, IT Automation
-                            team</span>
-                        <span>Mentors: Raju Pavuluri, Yu Deng, Rahul Krishna, Saurabh Jha</span>
-                    </div>
-                    <p>A benchmark testing whether AI agents can identify vulnerability chains that span realistic
-                        enterprise systems (application code, secrets, infrastructure-as-code, cloud/IAM, network
-                        policy, and agentic API trust) rather than a single vulnerable program.</p>
-                    <div class="foot"><span class="tag">AI agents</span><span class="tag">benchmark design</span><span
-                            class="tag">security</span></div>
-                </article>
-
-                <article class="card" data-themes="safety">
-                    <h4>CollectiveScope: Detecting Emergent Behavior in Multi-Agent AI</h4>
-                    <div class="meta">
-                        <span>Funded by a <a href="https://blog.cosmos-institute.org/p/announcing-80-new-cosmos-grantees"
-                                target="_blank">Cosmos Institute AI x Truth-Seeking grant</a> (2026)</span>
-                    </div>
-                    <p>As AI systems increasingly act as groups of interacting agents, risky coordination can emerge
-                        that no single agent was designed for. CollectiveScope detects the onset of emergent
-                        collective behavior, identifies which agents drive it, and causally validates that
-                        attribution through targeted interventions.</p>
-                    <div class="foot"><span class="tag">multi-agent systems</span><span class="tag">causal
-                            attribution</span>
-                        <a class="btn" href="https://github.com/sukikrishna/emergent_collective_behavior"
-                            target="_blank">Code</a></div>
-                </article>
-
-                <article class="card" data-themes="safety health">
-                    <h4>Mechanistic Interpretability of ECG Foundation Models</h4>
-                    <div class="meta">
-                        <span>Harvard SEAS</span>
-                    </div>
-                    <p>Do independently trained ECG foundation models learn shared, reproducible representations of
-                        the same clinical concepts, or do apparent "clinical features" depend on architecture, seed,
-                        dataset, and method? Using sparse autoencoders and causal tests, I also ask whether a
-                        clinical concept is partly a demographic one.</p>
-                    <div class="foot"><span class="tag">interpretability</span><span class="tag">sparse
-                            autoencoders</span>
-                        <a class="btn" href="https://github.com/sukikrishna/ecg_mechinterp"
-                            target="_blank">Code</a></div>
                 </article>
 
                 <article class="card" data-themes="hai">
@@ -217,8 +211,7 @@
                     <p>A conversational partner that reads a proposed negotiation strategy and its supporting
                         documents, surfaces loopholes, inconsistencies, and vulnerabilities, and suggests stronger
                         alternatives, built to support human judgment rather than replace it.</p>
-                    <div class="foot"><span class="tag">conversational AI</span><span class="tag">document
-                            reasoning</span></div>
+                    <div class="foot"><span class="tag">Human-AI Interaction</span></div>
                 </article>
 
                 <article class="card" data-themes="hai">
@@ -230,10 +223,10 @@
                     <p>A study of whether AI assistance helps CS course graders work more accurately and
                         consistently, and how students perceive and respond to AI-generated feedback on their
                         work.</p>
-                    <div class="foot"><span class="tag">education</span><span class="tag">user studies</span></div>
+                    <div class="foot"><span class="tag">Human-AI Interaction</span></div>
                 </article>
 
-                <article class="card" data-themes="health hai">
+                <article class="card" data-themes="health">
                     <h4>LLMs for Clinical Records &amp; Medical Education</h4>
                     <div class="meta">
                         <span><a href="https://www.brighamandwomens.org/" target="_blank">Brigham and Women's
@@ -244,7 +237,7 @@
                     <p>A bilingual, two-center study evaluating local LLMs for extracting infectious disease
                         syndromes from multilingual EHRs, plus an LLM tutor that generates cases and teaches through
                         Socratic dialogue, piloting in Harvard's HST40 in Fall 2026.</p>
-                    <div class="foot"><span class="tag">clinical NLP</span><span class="tag">local LLMs</span></div>
+                    <div class="foot"><span class="tag">AI for Health &amp; Science</span></div>
                 </article>
 
                 <article class="card" data-themes="health">
@@ -256,11 +249,10 @@
                     </div>
                     <p>A searchable, reaction-aware library and screening method for connecting terminal fragments
                         into synthesizable molecules that bind multiple targets.</p>
-                    <div class="foot"><span class="tag">drug discovery</span><span class="tag">virtual
-                            screening</span></div>
+                    <div class="foot"><span class="tag">AI for Health &amp; Science</span></div>
                 </article>
 
-                <article class="card" data-themes="health policy">
+                <article class="card" data-themes="health">
                     <h4>Epistemic Trespassing in COVID-19 Science</h4>
                     <div class="meta">
                         <span>Harvard SEAS and <a href="https://www.chip.org/" target="_blank">Computational Health
@@ -272,8 +264,7 @@
                         COVID-19 papers in OpenAlex, outbreak scientists never exceeded 12.5% of authors and 62.7% of
                         papers had none on the team. Yet expert-led teams published in higher-impact venues and drew
                         more citations, a pattern of expert dilution that fortified knowledge silos.</p>
-                    <div class="foot"><span class="tag">science of science</span><span class="tag">network
-                            analysis</span><span class="tag">bibliometrics</span></div>
+                    <div class="foot"><span class="tag">AI for Health &amp; Science</span></div>
                 </article>
 
                 <article class="card" data-themes="policy">
@@ -286,8 +277,7 @@
                     <p>A quantitative framework for diversifiable risk in AI infrastructure investments, scoring
                         site-level financial opacity, geographic vulnerability, resource stress, and community impact
                         and aggregating them into portfolio-level exposure.</p>
-                    <div class="foot"><span class="tag">AI governance</span><span class="tag">risk
-                            modeling</span></div>
+                    <div class="foot"><span class="tag">AI Policy</span></div>
                 </article>
 
             </div>
@@ -341,8 +331,8 @@
                     <span class="venue">RoboSoft 2025</span>
                     <div>
                         <span class="title">Towards Soft Steerable Vine Robots Using Actuating Polymers</span>
-                        <span class="authors"><b>Sukanya Krishna</b>, Jose Martinez, Sun Kim, &hellip;, Tania
-                            Morimoto</span>
+                        <span class="authors"><b>Sukanya Krishna</b>, Jacinda Martinez, Nicholas O'Shea, Capalina
+                            Melentyev, Sukjun Kim, Gaoweiang Dong, Shengqiang Cai, Tania K. Morimoto</span>
                         <span class="where">IEEE International Conference on Soft Robotics (RoboSoft), 2025</span>
                         <div class="btns"><a href="https://ieeexplore.ieee.org/abstract/document/11020849"
                                 target="_blank">IEEE</a></div>
@@ -356,7 +346,7 @@
                     <span class="venue ws">arXiv 2026</span>
                     <div>
                         <span class="title">Towards Human-AI Complementarity for AI Safety</span>
-                        <span class="authors">Shi, Christ, &hellip;, <b>Sukanya Krishna</b>, &hellip;, Rishub
+                        <span class="authors">Sander Lanbo Shi, Miranda Anna Christ, &hellip;, <b>Sukanya Krishna</b>, &hellip;, Rishub
                             Jain</span>
                         <div class="btns"><a href="https://arxiv.org/abs/2610.24969" target="_blank">arXiv</a></div>
                     </div>
@@ -365,7 +355,7 @@
                     <span class="venue ws">arXiv 2026</span>
                     <div>
                         <span class="title">Toward Human-AI Complementarity Across Diverse Tasks</span>
-                        <span class="authors">Xu, Dahmani, &hellip;, <b>Sukanya Krishna</b>, &hellip;, Rishub
+                        <span class="authors">Yuzheng Xu, Annya Dahmani, &hellip;, <b>Sukanya Krishna</b>, &hellip;, Rishub
                             Jain</span>
                         <div class="btns"><a href="https://arxiv.org/abs/2605.04070" target="_blank">arXiv</a></div>
                     </div>

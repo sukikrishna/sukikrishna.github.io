@@ -218,3 +218,6 @@ footer { margin-top: 56px; line-height: 1.6; padding: 24px 0 40px; border-top: 1
   border: 1px solid var(--accent); border-radius: 999px;
 }
 .more-link:hover { background: var(--accent); color: #fff; text-decoration: none; }
+
+/* Highlighted research question in the intro */
+mark.rq { background: linear-gradient(transparent 55%, var(--accent-soft) 55%); color: inherit; padding: 0 1px; }
