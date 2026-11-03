@@ -146,10 +146,9 @@
                         <span>Funded by a <a href="https://blog.cosmos-institute.org/p/announcing-80-new-cosmos-grantees"
                                 target="_blank">Cosmos Institute AI x Truth-Seeking grant</a> (2026)</span>
                     </div>
-                    <p>As AI systems increasingly act as groups of interacting agents, risky coordination can emerge
-                        that no single agent was designed for. CollectiveScope detects the onset of emergent
-                        collective behavior, identifies which agents drive it, and causally validates that
-                        attribution through targeted interventions.</p>
+                    <p>Multi-agent AI systems can develop coordinated behavior that no individual agent was designed to
+                        produce. CollectiveScope aims to detect when such collective behavior emerges, identify which agents
+                        drive it, and validate these attributions through targeted interventions.</p>
                     <div class="foot"><span class="tag">AI Safety &amp; Evaluation</span><a class="btn" href="https://github.com/sukikrishna/emergent_collective_behavior"
                             target="_blank">Code</a></div>
                 </article>
@@ -161,9 +160,9 @@
                             team</span>
                         <span>Mentors: Raju Pavuluri, Yu Deng, Rahul Krishna, Saurabh Jha</span>
                     </div>
-                    <p>A benchmark testing whether AI agents can identify vulnerability chains that span realistic
-                        enterprise systems (application code, secrets, infrastructure-as-code, cloud/IAM, network
-                        policy, and agentic API trust) rather than a single vulnerable program.</p>
+                    <p>A benchmark that evaluates whether AI agents can trace vulnerability chains spanning multiple
+                        components of an enterprise system (application code, secrets, infrastructure-as-code, cloud/IAM,
+                        network policy, and agentic API trust), rather than spanning a single vulnerability or single part of an application.</p>
                     <div class="foot"><span class="tag">AI Safety &amp; Evaluation</span></div>
                 </article>
 
@@ -172,10 +171,9 @@
                     <div class="meta">
                         <span>Harvard SEAS</span>
                     </div>
-                    <p>Do independently trained ECG foundation models learn shared, reproducible representations of
-                        the same clinical concepts, or do apparent "clinical features" depend on architecture, seed,
-                        dataset, and method? Using sparse autoencoders and causal tests, I also ask whether a
-                        clinical concept is partly a demographic one.</p>
+                    <p>Do independently trained ECG foundation models learn the same clinical concepts? Using sparse
+                        autoencoders, I extract the features these models learn and test whether they are consistent across
+                        architectures, random seeds, and training datasets.</p>
                     <div class="foot"><span class="tag">AI Safety &amp; Evaluation</span><a class="btn" href="https://github.com/sukikrishna/ecg_mechinterp"
                             target="_blank">Code</a></div>
                 </article>
@@ -190,12 +188,11 @@
                                 target="_blank">Jean-François Godbout</a>, <a href="https://dtak.github.io/"
                                 target="_blank">Finale Doshi-Velez</a></span>
                     </div>
-                    <p>How do people respond to the confidence LLMs express? We find people recognize when a
-                        model's assertive language exceeds its actual confidence, yet still reward it, a tension we
-                        call <i>confidence misalignment</i>. I also contribute to <a
-                            href="https://www.veri-fact.ai/" target="_blank">Veracity</a>, an open-source
-                        fact-checking assistant, and its browser extension, and study why fact-checking evaluation
-                        must separate ambiguous claims from genuine system failures.</p>
+                    <p>How do people respond to the confidence LLMs express? We find that people can tell when a model's
+                        assertive language exceeds its actual confidence, yet still favor those responses, a gap we call
+                        <i>confidence misalignment</i>. I also contribute to <a href="https://www.veri-fact.ai/"
+                        target="_blank">Veracity</a>, an open-source fact-checking system, and its browser extension, and
+                        develop evaluation methods that account for ambiguity in the claims/evidence being checked.</p>
                     <div class="foot">
                         <span class="tag">Human-AI Interaction</span><a class="btn" href="https://www.veri-fact.ai/" target="_blank">Demo</a>
                         <a class="btn" href="https://arxiv.org/abs/2506.15794" target="_blank">Paper</a>
@@ -208,9 +205,9 @@
                         <span>Harvard SEAS</span>
                         <span>Advisor: <a href="https://dtak.github.io/" target="_blank">Finale Doshi-Velez</a></span>
                     </div>
-                    <p>A conversational partner that reads a proposed negotiation strategy and its supporting
-                        documents, surfaces loopholes, inconsistencies, and vulnerabilities, and suggests stronger
-                        alternatives, built to support human judgment rather than replace it.</p>
+                    <p>An AI sparring partner that takes in a proposed strategy for a case,
+                        and interacts with the user (negotiator) to examine supporting documents, identify assumptions, loopholes, or inconsistencies that 
+                        be surfaced and suggest stronger alternatives. The aim is to prepare negotiators with the skills needed for effective negotiation.</p>
                     <div class="foot"><span class="tag">Human-AI Interaction</span></div>
                 </article>
 
@@ -220,23 +217,36 @@
                         <span><a href="https://bokcenter.harvard.edu/" target="_blank">Derek Bok Center for Teaching
                                 and Learning</a>, Harvard</span>
                     </div>
-                    <p>A study of whether AI assistance helps CS course graders work more accurately and
-                        consistently, and how students perceive and respond to AI-generated feedback on their
-                        work.</p>
+                    <p>A study of whether AI assistance improves the accuracy and consistency of grading in introductory CS courses (focusing on Harvard's CS20 - Discrete Mathematics for Computer Science course), and
+                        how students perceive and respond to AI-generated feedback.</p>
                     <div class="foot"><span class="tag">Human-AI Interaction</span></div>
                 </article>
-
                 <article class="card" data-themes="health">
-                    <h4>LLMs for Clinical Records &amp; Medical Education</h4>
+                    <h4>Clinical LLMs Across Two Hospitals</h4>
                     <div class="meta">
                         <span><a href="https://www.brighamandwomens.org/" target="_blank">Brigham and Women's
                                 Hospital</a> and <a href="https://www.amsterdamumc.org/en.htm" target="_blank">Amsterdam
                                 UMC</a></span>
                         <span>Advisor: Sanjat Kanjilal</span>
                     </div>
-                    <p>A bilingual, two-center study evaluating local LLMs for extracting infectious disease
-                        syndromes from multilingual EHRs, plus an LLM tutor that generates cases and teaches through
-                        Socratic dialogue, piloting in Harvard's HST40 in Fall 2026.</p>
+                    <p>Do clinical LLMs perform as reliably at one hospital as at another? In a two-center study at Brigham
+                        and Women's Hospital and Amsterdam UMC, we run the same open-weight models on-site on each
+                        hospital's patient notes to identify lower respiratory tract infections (pneumonia, influenza,
+                        COVID-19, and RSV), using patient microbiology results as ground truth. The study measures where these
+                        models generalize across health systems and where further validation is needed before clinical use.</p>
+                    <div class="foot"><span class="tag">AI for Health &amp; Science</span></div>
+                </article>
+
+                <article class="card" data-themes="health">
+                    <h4>Socratic AI Tutor for Medical Students</h4>
+                    <div class="meta">
+                        <span><a href="https://hms.harvard.edu/" target="_blank">Harvard Medical School</a></span>
+                        <span>Advisor: Sanjat Kanjilal</span>
+                    </div>
+                    <p>An LLM tutor that generates infectious disease cases and teaches through Socratic questioning rather
+                        than direct answers. Students practice interviewing a simulated patient, work toward a diagnosis,
+                        and review the relevant microbiology. The tutor will be piloted in Harvard's HST40 (Mechanisms of Microbial
+                        Pathogenesis) course</p>
                     <div class="foot"><span class="tag">AI for Health &amp; Science</span></div>
                 </article>
 
@@ -247,8 +257,8 @@
                                 target="_blank">Gorgulla Lab</a>, St. Jude Children's Research Hospital</span>
                         <span>Advisor: Christoph Gorgulla</span>
                     </div>
-                    <p>A searchable, reaction-aware library and screening method for connecting terminal fragments
-                        into synthesizable molecules that bind multiple targets.</p>
+                    <p>A reaction-aware fragment library and screening method for designing synthesizable molecules that
+                        bind multiple targets by linking terminal fragments.</p>
                     <div class="foot"><span class="tag">AI for Health &amp; Science</span></div>
                 </article>
 
@@ -260,10 +270,11 @@
                         <span>Advisor: <a href="https://maimunamajumder.com/" target="_blank">Maimuna
                                 Majumder</a></span>
                     </div>
-                    <p>How did the rush of researchers from other fields reshape pandemic science? Across 450,000+
-                        COVID-19 papers in OpenAlex, outbreak scientists never exceeded 12.5% of authors and 62.7% of
-                        papers had none on the team. Yet expert-led teams published in higher-impact venues and drew
-                        more citations, a pattern of expert dilution that fortified knowledge silos.</p>
+                    <p>How did the influx of researchers from other fields shape COVID-19 science? Across 450,000+ papers
+                        in OpenAlex, outbreak scientists never made up more than 12.5% of authors, and 62.7% of papers
+                        included none. Papers with outbreak experts appeared in higher-impact venues and received more
+                        citations, suggesting that expertise was diluted across the field while expert-led work remained
+                        siloed.</p>
                     <div class="foot"><span class="tag">AI for Health &amp; Science</span></div>
                 </article>
 
@@ -274,9 +285,9 @@
                         <span>Advisor: <a href="https://hsph.harvard.edu/profile/francesca-dominici/"
                                 target="_blank">Francesca Dominici</a></span>
                     </div>
-                    <p>A quantitative framework for diversifiable risk in AI infrastructure investments, scoring
-                        site-level financial opacity, geographic vulnerability, resource stress, and community impact
-                        and aggregating them into portfolio-level exposure.</p>
+                    <p>A quantitative framework for assessing diversifiable risk in AI infrastructure investments. It
+                        scores sites on financial opacity, geographic vulnerability, resource stress, and community impact,
+                        and aggregates these scores into portfolio-level exposure.</p>
                     <div class="foot"><span class="tag">AI Policy</span></div>
                 </article>
 
@@ -564,7 +575,7 @@
             <ul class="rows">
                 <li><span class="what">Student Leader in AI, <a href="https://cyber.harvard.edu/"
                             target="_blank">Berkman Klein Center for Internet &amp; Society</a></span></li>
-                <li><span class="what">Policy Fellow, Harvard AI Safety Student Team (AISST)</span></li>
+                <li><span class="what">Member, AI Safety Team (AIST)</span></li>
                 <li><span class="what">Student Leader, Harvard Interfaith Dialogue Program</span></li>
                 <li><span class="what">SEAS InTouch Peer Mentor</span>
                     <span class="detail">Supporting graduate student community and well-being.</span></li>
